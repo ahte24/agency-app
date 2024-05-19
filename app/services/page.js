@@ -107,7 +107,7 @@ const Services = () => {
 									Our Web Design service is all about creating visually stunning
 									and user-friendly websites that leave a lasting impression on
 									your audience. We blend creativity with functionality to
-									deliver websites that showcase your brand's identity while
+									deliver websites that showcase your brand s identity while
 									ensuring seamless navigation and optimal user experience.
 								</p>
 							</div>
@@ -228,10 +228,10 @@ const Services = () => {
 								<h3 className="text-xl font-semibold">Digital Marketing</h3>
 								<p className="text-sm text-center text-[#8C8C8C]">
 									In the digital age, marketing is a critical aspect of your
-									business's success. Our Digital Marketing service employs
-									data-driven strategies to enhance your brand's visibility,
+									business s success. Our Digital Marketing service employs
+									data-driven strategies to enhance your brand s visibility,
 									attract targeted traffic, and boost conversions. From SEO and
-									PPC campaigns to social media marketing, we've got your
+									PPC campaigns to social media marketing, we ve got your
 									digital marketing needs covered.
 								</p>
 							</div>
@@ -417,7 +417,7 @@ const Services = () => {
 									<p className="text-sm text-[#808080]">
 										Our Web Design process follows a systematic approach to
 										deliver a website that aligns perfectly with your business
-										needs and branding. Here's an overview of our design process
+										needs and branding. Here s an overview of our design process
 									</p>
 								</div>
 								<div className="w-full h-full flex flex-col gap-10">
@@ -518,7 +518,7 @@ const Services = () => {
 									<p className="text-sm text-[#808080]">
 										At DigitX, we are dedicated to creating transformative
 										mobile apps that empower your business and enrich your
-										users' experiences.
+										users  experiences.
 									</p>
 									<div className="flex flex-col gap-5">
 										<div className="w-full h-14 rounded-xl border border-[#1F1F1F] flex">
