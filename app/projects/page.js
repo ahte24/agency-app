@@ -81,11 +81,11 @@ const Projects = () => {
 						innovative solutions tailored to your unique needs. Our team of
 						skilled professionals, coupled with cutting-edge technologies,
 						ensures that we deliver exceptional results that elevate your online
-						presence. Whether it's captivating web designs, seamless app
+						presence. Whether it\'quote\''s captivating web designs, seamless app
 						development, effective digital marketing, or other digital
 						solutions, we are dedicated to bringing your ideas to life and
 						helping your business thrive in the dynamic digital landscape.
-						Partner with us today, and let's unlock endless possibilities for
+						Partner with us today, and let\'quote\''s unlock endless possibilities for
 						your digital success!
 					</p>
 				</div>
@@ -108,7 +108,7 @@ const Projects = () => {
 							<h4 className="font-semibold text-sm">Strategic planning</h4>
 							<p className="text-sm font-thin text-center">
 								Every project begins with thorough research and strategic
-								planning to ensure a holistic understanding of our clients'
+								planning to ensure a holistic understanding of our clients\'quote\''
 								objectives and target audience.
 							</p>
 						</div>
@@ -117,9 +117,9 @@ const Projects = () => {
 							<Image src={projectCustomized} width={50} height={50} alt="" />
 							<h4 className="font-semibold text-sm">Customized Solutions</h4>
 							<p className="text-sm font-thin text-center">
-								We believe in tailoring our services to suit each project's
+								We believe in tailoring our services to suit each project\'quote\''s
 								unique requirements, resulting in solutions that perfectly align
-								with our clients' brand identities.ence.
+								with our clients\'quote\'' brand identities.ence.
 							</p>
 						</div>
 						<div className="border-r border-[#1F1F1F]"></div>
@@ -161,7 +161,7 @@ const Projects = () => {
 				</h1>
 				<p className="text-sm text-[#808080] text-center w-[900px]">
 					Witness the brilliance of our previous projects. Our portfolio
-					showcases the successful collaborations we've had with diverse clients
+					showcases the successful collaborations we\'quote\''ve had with diverse clients
 					across various industries. Let our work speak for itself.
 				</p>
 				<div className="mt-4 flex items-center flex-col w-full ">

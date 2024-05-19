@@ -148,7 +148,7 @@ export default function Home() {
 										Tailored Business Solutions
 									</h3>
 									<p className="text-sm text-center text-[#8C8C8C]">
-										We understand that every business is unique. That's why our
+										We understand that every business is unique. That s why our
 										solutions are customized.
 									</p>
 								</div>
@@ -222,7 +222,7 @@ export default function Home() {
 										Mobile-First Approach
 									</h3>
 									<p className="text-sm text-center text-[#8C8C8C]">
-										In today's mobile-centric world, we prioritize mobile-first
+										In today s mobile-centric world, we prioritize mobile-first
 										design to ensure your website.
 									</p>
 								</div>
@@ -331,7 +331,7 @@ export default function Home() {
 					</h1>
 					<p className="text-sm text-[#808080] text-center w-[900px]">
 						Our comprehensive range of services includes web design, mobile app
-						development, SEO, social media marketing, and more. Whether you're a
+						development, SEO, social media marketing, and more. Whether you re a
 						startup or an established enterprise, our experts will craft
 						solutions that drive results.
 					</p>
@@ -341,7 +341,7 @@ export default function Home() {
 							<div className="flex flex-col justify-center items-center gap-4 w-[80%]">
 								<h3 className="text-xl font-semibold">Web Development</h3>
 								<p className="text-sm text-center text-[#8C8C8C]">
-									Unlock Your Online Potential In today's digital age, a
+									Unlock Your Online Potential In today s digital age, a
 									powerful web presence is essential for any business. At
 									DigitX, our web development services empower you to stand out
 									in the crowded online landscape. We create responsive and
@@ -387,7 +387,7 @@ export default function Home() {
 									app development services enable you to harness this mobility
 									to your advantage. We design and build intuitive and
 									high-performance mobile applications that captivate your
-									audience and boost engagement. Whether it's iOS, Android, or
+									audience and boost engagement. Whether it s iOS, Android, or
 									cross-platform development, we ensure that your app delivers a
 									seamless experience, leaving a lasting impression on your
 									users.
@@ -423,14 +423,14 @@ export default function Home() {
 							<div className="flex flex-col justify-center items-center gap-4 w-[80%]">
 								<h3 className="text-xl font-semibold">Web Design</h3>
 								<p className="text-sm text-center text-[#8C8C8C]">
-									Elevate Your Brand Aesthetics Your website's design is a
-									reflection of your brand's identity and values. DigitX's web
+									Elevate Your Brand Aesthetics Your website s design is a
+									reflection of your brand s identity and values. DigitX s web
 									design services focus on creating visually striking and
 									user-friendly interfaces that leave a lasting impact. Our
 									creative team blends aesthetics with functionality, delivering
 									a captivating user experience that keeps visitors coming back
 									for more. Let us transform your online presence into an
-									immersive journey that showcases your brand's true essence.
+									immersive journey that showcases your brand s true essence.
 								</p>
 							</div>
 							<Link
@@ -501,7 +501,7 @@ export default function Home() {
 					</h1>
 					<p className="text-sm text-[#808080] text-center w-[900px]">
 						Witness the brilliance of our previous projects. Our portfolio
-						showcases the successful collaborations we've had with diverse
+						showcases the successful collaborations we ve had with diverse
 						clients across various industries. Let our work speak for itself.
 					</p>
 					<div className="w-full h-[600px] flex gap-10 ">
@@ -649,7 +649,7 @@ export default function Home() {
 									</div>
 									<p className="text-sm text-[#8C8C8C]">
 										Check out our sleek and modern corporate website that
-										showcases the client's brand and services. Its responsive
+										showcases the client s brand and services. Its responsive
 										design ensures a consistent experience across devices.
 									</p>
 								</div>
@@ -699,7 +699,7 @@ export default function Home() {
 									</div>
 									<p className="text-sm text-[#8C8C8C]">
 										Discover how our data-driven digital marketing strategies
-										boosted a client's online presence, resulting in a
+										boosted a client s online presence, resulting in a
 										significant increase in website traffic and leads.
 									</p>
 								</div>
@@ -736,7 +736,7 @@ export default function Home() {
 						<span className="text-[#808080]">Our</span> Testimonials
 					</h1>
 					<p className="text-sm text-[#808080] text-center w-[900px]">
-						Don't just take our word for it; hear what our satisfied clients
+						Don t just take our word for it; hear what our satisfied clients
 						have to say about their experience with DigitX. We take pride in
 						building lasting relationships and delivering exceptional results.
 					</p>
@@ -773,7 +773,7 @@ export default function Home() {
 								</svg>
 								<p className="text-sm">
 									Working with DigitX was a pleasure. Their web design team
-									created a stunning website that perfectly captured our brand's
+									created a stunning website that perfectly captured our brand s
 									essence. The feedback from our customers has been
 									overwhelmingly positive.
 								</p>
@@ -841,7 +841,7 @@ export default function Home() {
 								</svg>
 								<p className="text-sm">
 									Working with DigitX was a pleasure. Their web design team
-									created a stunning website that perfectly captured our brand's
+									created a stunning website that perfectly captured our brand s
 									essence. The feedback from our customers has been
 									overwhelmingly positive.
 								</p>
@@ -908,7 +908,7 @@ export default function Home() {
 								</svg>
 								<p className="text-sm">
 									Working with DigitX was a pleasure. Their web design team
-									created a stunning website that perfectly captured our brand's
+									created a stunning website that perfectly captured our brand s
 									essence. The feedback from our customers has been
 									overwhelmingly positive.
 								</p>
@@ -975,7 +975,7 @@ export default function Home() {
 								</svg>
 								<p className="text-sm">
 									Working with DigitX was a pleasure. Their web design team
-									created a stunning website that perfectly captured our brand's
+									created a stunning website that perfectly captured our brand s
 									essence. The feedback from our customers has been
 									overwhelmingly positive.
 								</p>
@@ -1018,7 +1018,7 @@ export default function Home() {
 						<span className="text-[#808080]">Frequently</span> Asked Questions
 					</h1>
 					<p className="text-sm text-[#808080] text-center w-[900px]">
-						Got questions? We've got answers. Check out our frequently asked
+						Got questions? We ve got answers. Check out our frequently asked
 						questions section to find valuable insights into our processes,
 						pricing, and more. Transparency is at the core of our client
 						interactions.
@@ -1055,7 +1055,7 @@ export default function Home() {
 											isHidden1 ? "opacity-0 h-0" : "opacity-100 h-auto"
 										} transition-opacity duration-1000`}
 									>
-										The timeline varies depending on the project's complexity
+										The timeline varies depending on the project s complexity
 										and requirements. Our team strives to deliver projects on
 										time while maintaining the highest quality standards.
 									</p>
@@ -1111,7 +1111,7 @@ export default function Home() {
 											isHidden2 ? "opacity-0 h-0" : "opacity-100 h-auto"
 										} transition-opacity duration-1000`}
 									>
-										The timeline varies depending on the project's complexity
+										The timeline varies depending on the project s complexity
 										and requirements. Our team strives to deliver projects on
 										time while maintaining the highest quality standards.
 									</p>
@@ -1168,7 +1168,7 @@ export default function Home() {
 											isHidden3 ? "opacity-0 h-0" : "opacity-100 h-auto"
 										} transition-opacity duration-1000`}
 									>
-										The timeline varies depending on the project's complexity
+										The timeline varies depending on the project s complexity
 										and requirements. Our team strives to deliver projects on
 										time while maintaining the highest quality standards.
 									</p>
@@ -1225,7 +1225,7 @@ export default function Home() {
 											isHidden4 ? "opacity-0 h-0" : "opacity-100 h-auto"
 										} transition-opacity duration-1000`}
 									>
-										The timeline varies depending on the project's complexity
+										The timeline varies depending on the project s complexity
 										and requirements. Our team strives to deliver projects on
 										time while maintaining the highest quality standards.
 									</p>
@@ -1284,7 +1284,7 @@ export default function Home() {
 											isHidden5 ? "opacity-0 h-0" : "opacity-100 h-auto"
 										} transition-opacity duration-1000`}
 									>
-										The timeline varies depending on the project's complexity
+										The timeline varies depending on the project s complexity
 										and requirements. Our team strives to deliver projects on
 										time while maintaining the highest quality standards.
 									</p>
@@ -1341,7 +1341,7 @@ export default function Home() {
 											isHidden6 ? "opacity-0 h-0" : "opacity-100 h-auto"
 										} transition-opacity duration-1000`}
 									>
-										The timeline varies depending on the project's complexity
+										The timeline varies depending on the project s complexity
 										and requirements. Our team strives to deliver projects on
 										time while maintaining the highest quality standards.
 									</p>
@@ -1397,7 +1397,7 @@ export default function Home() {
 											isHidden7 ? "opacity-0 h-0" : "opacity-100 h-auto"
 										} transition-opacity duration-1000`}
 									>
-										The timeline varies depending on the project's complexity
+										The timeline varies depending on the project s complexity
 										and requirements. Our team strives to deliver projects on
 										time while maintaining the highest quality standards.
 									</p>
@@ -1454,7 +1454,7 @@ export default function Home() {
 											isHidden ? "opacity-0 h-0" : "opacity-100 h-auto"
 										} transition-opacity duration-1000`}
 									>
-										The timeline varies depending on the project's complexity
+										The timeline varies depending on the project s complexity
 										and requirements. Our team strives to deliver projects on
 										time while maintaining the highest quality standards.
 									</p>
