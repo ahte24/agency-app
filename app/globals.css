@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-element {
+    background-image: url('../public/bg.svg');
+
+}
+
+.my-cardBG {
+    background-image: url('../public/cardBg.svg');
+
+}
+
+.my-workCardBg {
+    background-image: url('../public/workCardBg.svg');
+}
+
+.my-workCardBgImg {
+    background-image: url('../public/cardBgImg.png');
+}
+
+.my-clientCardBG {
+    background-image: url('../public/ClientCardBG.svg');
+}
+.my-BG {
+    background-image: url('../public/sun.svg');
+}
