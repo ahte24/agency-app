@@ -4,37 +4,6 @@ import Link from "next/link";
 const Footer = () => {
 	return (
 		<>
-			<div className="mt-24 xl:max-w-[1280px] h-[700px] mx-auto border border-[#262626] rounded-2xl  my-cardBG flex flex-col items-center">
-				<div className="mt-16 xl:w-[900px] flex flex-col gap-5 px-10">
-					<h1 className="text-2xl font-semibold text-center">
-						Ready to Transform Your Digital Presence?
-					</h1>
-					<p className="text-sm text-center text-[#808080]">
-						Take the first step towards digital success with DigitX by your
-						side. Our team of experts is eager to craft tailored solutions that
-						drive growth for your business. Whether you need a stunning website,
-						a powerful mobile app, or a data-driven marketing campaign, we ve
-						got you covered. Let s embark on this transformative journey
-						together.
-					</p>
-				</div>
-				<div className="mt-12 flex flex-col items-center gap-3">
-					<span className="text-sm font-semibold">
-						Unlock your digital potential today
-					</span>
-					<div className="flex gap-3">
-						<button className="text-xs px-4 py-3 bg-white rounded-full text-black">
-							Get Started
-						</button>
-						<button className="text-xs px-4 py-3  bg-[#1A1A1A] rounded-full  border border-[#262626]">
-							Free Consultation
-						</button>
-					</div>
-				</div>
-				<div className="h-[800px] w-full flex justify-center items-center">
-					<h1 className="text-4xl">LOGO</h1>
-				</div>
-			</div>
 			<footer className="w-full mt-16">
 				<div className="h-24  flex justify-between w-[90%] mx-auto border-b border-[#1F1F1F]">
 					<div className="flex justify-center items-center">

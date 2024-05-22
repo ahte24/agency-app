@@ -105,7 +105,10 @@ const Contact = () => {
 						<form className="flex flex-col gap-4" action="">
 							<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
-									<label htmlFor="Name" className="font-light ml-2 text-xs sm:text-sm">
+									<label
+										htmlFor="Name"
+										className="font-light ml-2 text-xs sm:text-sm"
+									>
 										Name
 									</label>
 									<input
@@ -115,7 +118,10 @@ const Contact = () => {
 									/>
 								</div>
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
-									<label htmlFor="Email" className="text-xs sm:text-sm font-light ml-2">
+									<label
+										htmlFor="Email"
+										className="text-xs sm:text-sm font-light ml-2"
+									>
 										Email
 									</label>
 									<input
@@ -166,7 +172,10 @@ const Contact = () => {
 									/>
 								</div>
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
-									<label htmlFor="Subject" className="text-xs sm:text-sm font-light ml-2">
+									<label
+										htmlFor="Subject"
+										className="text-xs sm:text-sm font-light ml-2"
+									>
 										Subject
 									</label>
 									<select
@@ -183,7 +192,10 @@ const Contact = () => {
 							</div>
 							<div className="w-full min-h-[120px] flex items-center justify-between">
 								<div className="h-full w-full flex flex-col justify-center px-5 gap-2">
-									<label htmlFor="Message" className="text-xs sm:text-sm font-light ml-2">
+									<label
+										htmlFor="Message"
+										className="text-xs sm:text-sm font-light ml-2"
+									>
 										Message
 									</label>
 									<textarea
@@ -628,6 +640,39 @@ const Contact = () => {
 								For considering DigitX for your digital needs. We look forward
 								to connecting with you and being part of your digital success!
 							</p>
+						</div>
+					</div>
+				</div>
+				<div className="flex flex-col items-center mt-24 p-4 w-full sm:max-w-[1280px] mx-auto gap-5 relative">
+					<div className="xl:max-w-[1280px] h-[700px] mx-auto border border-[#262626] rounded-2xl  my-cardBG flex flex-col items-center">
+						<div className="mt-16 xl:w-[900px] flex flex-col gap-5 px-10">
+							<h1 className="text-2xl font-semibold text-center">
+								Ready to Transform Your Digital Presence?
+							</h1>
+							<p className="text-sm text-center text-[#808080]">
+								Take the first step towards digital success with DigitX by your
+								side. Our team of experts is eager to craft tailored solutions
+								that drive growth for your business. Whether you need a stunning
+								website, a powerful mobile app, or a data-driven marketing
+								campaign, we ve got you covered. Let s embark on this
+								transformative journey together.
+							</p>
+						</div>
+						<div className="mt-12 flex flex-col items-center gap-3">
+							<span className="text-sm font-semibold">
+								Unlock your digital potential today
+							</span>
+							<div className="flex gap-3">
+								<button className="text-xs px-4 py-3 bg-white rounded-full text-black">
+									Get Started
+								</button>
+								<button className="text-xs px-4 py-3  bg-[#1A1A1A] rounded-full  border border-[#262626]">
+									Free Consultation
+								</button>
+							</div>
+						</div>
+						<div className="h-[800px] w-full flex justify-center items-center">
+							<h1 className="text-4xl">LOGO</h1>
 						</div>
 					</div>
 				</div>

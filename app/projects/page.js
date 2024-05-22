@@ -2114,6 +2114,173 @@ const Projects = () => {
 					</div>
 				</div>
 			</div>
+			<div className="flex flex-col items-center mt-24 p-4 w-full sm:max-w-[1280px] mx-auto gap-5 relative">
+					<div className="xl:max-w-[1280px] minh-[700px] mx-auto border border-[#262626] rounded-2xl p-5  my-cardBG flex flex-col items-center">
+						<div className="mt-16 xl:w-[900px] flex flex-col gap-5 lg:px-10">
+							<h1 className="text-2xl font-semibold text-center">
+								Ready to Transform Your Digital Presence?
+							</h1>
+							<p className="text-sm text-center text-[#808080]">
+								Take the first step towards digital success with DigitX by your
+								side. Our team of experts is eager to craft tailored solutions
+								that drive growth for your business. Whether you need a stunning
+								website, a powerful mobile app, or a data-driven marketing
+								campaign, we ve got you covered. Let s embark on this
+								transformative journey together.
+							</p>
+						</div>
+						<div className="mt-12 flex flex-col items-center gap-3">
+							<span className="text-sm text-center font-semibold">
+								Unlock your digital potential today
+							</span>
+							<div className="flex gap-3">
+								<button className="text-xs px-2 lg:px-4 py-2 lg:py-3 bg-white rounded-full text-black">
+									Get Started
+								</button>
+								<button className="text-xs px-2 lg:px-4 py-2 lg:py-3  bg-[#1A1A1A] rounded-full  border border-[#262626]">
+									Free Consultation
+								</button>
+							</div>
+						</div>
+						<div className="w-full mt-12 rounded-xl flex flex-col gap-6  bg-[#0f0f0f] p-">
+							<div className="w-full h-[80px] flex flex-col items-center justify-center p-2 gap-4">
+								<h4 className="font-semibold text-center">
+									Online Inquiry Form
+								</h4>
+								<p className="lg:text-sm text-center text-xs text-[#808080]">
+									Please fill in the following details, and we ll get back to
+									you within 24 hours.
+								</p>
+							</div>
+							<form className="flex flex-col gap-4" action="">
+								<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
+									<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
+										<label
+											htmlFor="Name"
+											className="font-light ml-2 text-xs sm:text-sm"
+										>
+											Name
+										</label>
+										<input
+											type="text"
+											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+											placeholder="Name"
+										/>
+									</div>
+									<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
+										<label
+											htmlFor="Email"
+											className="text-xs sm:text-sm font-light ml-2"
+										>
+											Email
+										</label>
+										<input
+											type="email"
+											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+											placeholder="Enter your Email"
+										/>
+									</div>
+									<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
+										<label
+											htmlFor="Phone Number"
+											className="text-xs sm:text-sm font-light ml-2"
+										>
+											Phone Number
+										</label>
+										<input
+											type="text"
+											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+											placeholder="Enter your Phone Number"
+										/>
+									</div>
+								</div>
+								<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
+									<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
+										<label
+											htmlFor="Select Service"
+											className="text-xs sm:text-sm font-light ml-2"
+										>
+											Select Service
+										</label>
+										<input
+											type="text"
+											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+											placeholder="Select your Service"
+										/>
+									</div>
+									<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
+										<label
+											htmlFor="Company / Organization Name"
+											className="text-xs sm:text-sm font-light ml-2"
+										>
+											Company / Organization Name
+										</label>
+										<input
+											type="text"
+											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+											placeholder="Enter Organization Name"
+										/>
+									</div>
+									<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
+										<label
+											htmlFor="Subject"
+											className="text-xs sm:text-sm font-light ml-2"
+										>
+											Subject
+										</label>
+										<select
+											id="underline_select"
+											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none appearance-none text-[#666666]"
+										>
+											<option selected>Choose your Subject</option>
+											<option value="US">United States</option>
+											<option value="CA">Canada</option>
+											<option value="FR">France</option>
+											<option value="DE">Germany</option>
+										</select>
+									</div>
+								</div>
+								<div className="w-full min-h-[120px] flex items-center justify-between">
+									<div className="h-full w-full flex flex-col justify-center px-5 gap-2">
+										<label
+											htmlFor="Message"
+											className="text-xs sm:text-sm font-light ml-2"
+										>
+											Message
+										</label>
+										<textarea
+											name="Message"
+											id=""
+											placeholder="Enter your Message"
+											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-xl h-[100px] p-4 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+										></textarea>
+									</div>
+								</div>
+								<div className="w-full min-h-[70px] flex items-center justify-center">
+									<button className="border border-[#1F1F1F] px-5 py-3 rounded-full flex justify-center items-center gap-2 bg-[#1a1a1a]">
+										<span className="text-xs sm:text-sm">
+											Send your Inquiry
+										</span>
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M5.33398 11.9999C5.33398 11.42 5.79065 10.9499 6.35398 10.9499H15.3816L12.447 8.20678C12.0409 7.80484 12.0283 7.14015 12.4187 6.72214C12.8092 6.30413 13.4549 6.2911 13.861 6.69303L18.621 11.243C18.821 11.441 18.934 11.7143 18.934 11.9999C18.934 12.2855 18.821 12.5588 18.621 12.7568L13.861 17.3068C13.4549 17.7087 12.8092 17.6957 12.4187 17.2777C12.0283 16.8597 12.0409 16.195 12.447 15.793L15.3816 13.0499H6.35398C5.79065 13.0499 5.33398 12.5798 5.33398 11.9999Z"
+												fill="white"
+											/>
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 		</main>
 	);
 };
