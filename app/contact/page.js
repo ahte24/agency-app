@@ -91,14 +91,14 @@ const Contact = () => {
 						Whether you are interested in our digital services, have questions
 						about our projects, or want to explore potential partnerships, we
 						encourage you to reach out to our dedicated team. Connect with us
-						through any of the channels below, and we'll be delighted to assist
+						through any of the channels below, and we ll be delighted to assist
 						you on your digital journey.
 					</p>
 					<div className="w-full rounded-xl flex flex-col gap-6 border border-[#1F1F1F] bg-[#0f0f0f] p-4">
 						<div className="w-full h-[80px] flex flex-col items-center justify-center p-2 gap-4">
 							<h4 className="font-semibold text-center">Online Inquiry Form</h4>
 							<p className="lg:text-sm text-center text-xs text-[#808080]">
-								Please fill in the following details, and we'll get back to you
+								Please fill in the following details, and we ll get back to you
 								within 24 hours.
 							</p>
 						</div>

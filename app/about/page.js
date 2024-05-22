@@ -2747,7 +2747,7 @@ const About = () => {
 					</h1>
 					<p className="text-sm text-[#808080] text-center lg:w-[900px]">
 						Witness the brilliance of our previous projects. Our portfolio
-						showcases the successful collaborations we've had with diverse
+						showcases the successful collaborations we ve had with diverse
 						clients across various industries. Let our work speak for itself.
 					</p>
 					<div className="mt-6 w-full ">
@@ -2940,7 +2940,7 @@ const About = () => {
 					</h1>
 					<p className="text-sm text-[#808080] text-center lg:w-[900px]">
 						Witness the brilliance of our previous projects. Our portfolio
-						showcases the successful collaborations we've had with diverse
+						showcases the successful collaborations we ve had with diverse
 						clients across various industries. Let our work speak for itself.
 					</p>
 					<div className="flex flex-col gap-10">
