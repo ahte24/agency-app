@@ -49,12 +49,6 @@ const Navbar = () => {
 							>
 								Contact Us
 							</Link>
-							<Link
-								href={"/#"}
-								className="text-sm text-center py-2 px-3 transition-all hover:bg-[#1A1A1A] rounded-full"
-							>
-								Careers
-							</Link>
 						</ul>
 						<button
 							className={`md:hidden absolute right-[40px]  top-[16px] ${
