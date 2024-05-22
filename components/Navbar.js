@@ -57,7 +57,7 @@ const Navbar = () => {
 							</Link>
 						</ul>
 						<button
-							className={`md:hidden absolute right-[40px]  top-[20px] ${
+							className={`md:hidden absolute right-[40px]  top-[16px] ${
 								isHidden ? "opacity-100 h-auto" : "opacity-0 h-0"
 							} transition-opacity duration-500`}
 							onClick={toggleVisibility}
@@ -65,7 +65,7 @@ const Navbar = () => {
 							<Image width={30} height={30} src={hamburger} alt="" />
 						</button>
 						<button
-							className={`md:hidden absolute  right-[40px] top-[20px]  ${
+							className={`md:hidden absolute  right-[40px] top-[16px]  ${
 								isHidden ? "opacity-0 h-0" : "opacity-100 h-auto"
 							} transition-opacity duration-500`}
 							onClick={toggleVisibility}
