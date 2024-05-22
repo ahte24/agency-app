@@ -4,8 +4,8 @@ import Link from "next/link";
 const Footer = () => {
 	return (
 		<>
-			<div className="mt-24 w-[1280px] h-[700px] mx-auto border border-[#262626] rounded-2xl  my-cardBG flex flex-col items-center">
-				<div className="mt-16 w-[900px] flex flex-col gap-5">
+			<div className="mt-24 xl:max-w-[1280px] h-[700px] mx-auto border border-[#262626] rounded-2xl  my-cardBG flex flex-col items-center">
+				<div className="mt-16 xl:w-[900px] flex flex-col gap-5 px-10">
 					<h1 className="text-2xl font-semibold text-center">
 						Ready to Transform Your Digital Presence?
 					</h1>
@@ -13,8 +13,8 @@ const Footer = () => {
 						Take the first step towards digital success with DigitX by your
 						side. Our team of experts is eager to craft tailored solutions that
 						drive growth for your business. Whether you need a stunning website,
-						a powerful mobile app, or a data-driven marketing campaign, we ve
-						got you covered. Let s embark on this transformative journey
+						a powerful mobile app, or a data-driven marketing campaign, we've
+						got you covered. Let's embark on this transformative journey
 						together.
 					</p>
 				</div>
@@ -35,7 +35,7 @@ const Footer = () => {
 					<h1 className="text-4xl">LOGO</h1>
 				</div>
 			</div>
-			<footer className="w-full mt-24">
+			<footer className="w-full mt-16">
 				<div className="h-24  flex justify-between w-[90%] mx-auto border-b border-[#1F1F1F]">
 					<div className="flex justify-center items-center">
 						<svg
@@ -56,11 +56,11 @@ const Footer = () => {
 						</svg>
 					</div>
 					<div className="flex gap-4 w-[500px] justify-end  items-center ">
-						<span>Follow Us on Social Media</span>
+						<span className="sm:block hidden">Follow Us on Social Media</span>
 						<Link href="/#" className="LInkedIn ">
 							<svg
-								width="50"
-								height="50"
+								width="40"
+								height="40"
 								viewBox="0 0 64 64"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
@@ -135,8 +135,8 @@ const Footer = () => {
 						</Link>
 						<Link href={"/#"} className="Instagram">
 							<svg
-								width="50"
-								height="50"
+								width="40"
+								height="40"
 								viewBox="0 0 64 64"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
@@ -250,8 +250,8 @@ const Footer = () => {
 						</Link>
 						<Link href={"/#"} className="X">
 							<svg
-								width="50"
-								height="50"
+								width="40"
+								height="40"
 								viewBox="0 0 64 64"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
@@ -304,7 +304,7 @@ const Footer = () => {
 						</Link>
 					</div>
 				</div>
-				<div className="flex justify-between w-[90%] mx-auto border-b border-[#1F1F1F]  p-5">
+				<div className="sm:flex justify-between max-w-[90%] mx-auto border-b border-[#1F1F1F]  p-5  hidden">
 					<div className=" flex-col items-center ">
 						<h4 className=" font-semibold ">Home</h4>
 						<div className="mt-2 flex flex-col gap-1">
@@ -415,34 +415,11 @@ const Footer = () => {
 							</Link>
 						</div>
 					</div>
-					<div className=" flex-col items-center ">
-						<h4 className=" font-semibold ">Careers</h4>
-						<div className="mt-2 flex flex-col gap-1">
-							<Link
-								href={"/#"}
-								className="hover:text-[#b1b0b0] transition-all flex text-sm text-[#808080]"
-							>
-								Job Openings{" "}
-							</Link>
-							<Link
-								href={"/#"}
-								className="hover:text-[#b1b0b0] transition-all flex text-sm text-[#808080]"
-							>
-								Benefits & Perks{" "}
-							</Link>
-							<Link
-								href={"/#"}
-								className="hover:text-[#b1b0b0] transition-all flex text-sm text-[#808080]"
-							>
-								Employee Refral{" "}
-							</Link>
-						</div>
-					</div>
 				</div>
-				<div className="flex justify-between w-[90%] mx-auto h-16 items-center text-sm  text-[#666666]">
-					<span>@2024 DigitX. All Rights Reserved.</span>
+				<div className="flex justify-between w-[90%] mx-auto h-16 items-center  text-[#666666] text-xs md:text-sm">
+					<span className="">@2024 DigitX. All Rights Reserved.</span>
 					<div>Version 1.0</div>
-					<div>
+					<div className="sm:block hidden">
 						<span>Privacy Policy</span>
 						<span>Terms & Condition</span>
 						<span>Cookie Policy</span>

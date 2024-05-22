@@ -23,6 +23,26 @@
 .my-clientCardBG {
     background-image: url('../public/ClientCardBG.svg');
 }
+
 .my-BG {
     background-image: url('../public/sun.svg');
+}
+
+.team-BG {
+    background-image: url('../public/teamCardBG.svg');
+}
+
+.Dp-bg {
+    background-image: url("../public/dpFrame.svg");
+}
+
+.achievements-bg {
+    background-image: url("../public/achievementsBG.svg");
+}
+.contactus-bg {
+    background-image: url("../public/contactus.svg");
+}
+
+.contactUS-bg {
+    background-image: url("../public/contactusBG.svg");
 }

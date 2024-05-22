@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,131 +12,153 @@ import servicesprotfolio1 from "@/public/servicesprotfolio1.jpg";
 import servicesprotfolio2 from "@/public/servicesportfolio2.jpg";
 import avatar1 from "@/public/avatar1.png";
 import avatar2 from "@/public/avatar2.png";
+import { useState } from "react";
 
 const Projects = () => {
+	const [isHidden, setIsHidden] = useState(true);
+	const [currentVisibleIndex, setCurrentVisibleIndex] = useState(null); // Initially no div visible
+
+	const toggleVisibility = (index) => {
+		if (currentVisibleIndex === index) {
+			// Clicking the same div hides it
+			setCurrentVisibleIndex(null);
+		} else {
+			// Clicking a different div shows it
+			setCurrentVisibleIndex(index);
+		}
+	};
+
 	return (
 		<main>
 			<div className="Herro-Section">
-				<div className="h-[600px] my-cardBG flex relative">
-					<div className="w-1/3 pt-20 flex">
+				<div className="lg:h-[550px] min-h-[400px] my-cardBG flex relative">
+					<div className="w-1/3 pt-20 lg:flex hidden">
 						<Image src={serviceLeftAngle} width={600} height={700} alt="" />
 					</div>
-					<div className="w-1/3 mt-20 "> </div>
-					<div className="w-1/3 pt-20 flex justify-end">
+					<div className="w-1/3 mt-20 lg:block hidden"> </div>
+					<div className="w-1/3 pt-20 lg:flex justify-end  hidden">
 						<Image src={serviceRightAngle} width={600} height={700} alt="" />
 					</div>
 				</div>
-				<div className="flex absolute top-20 left-0 ">
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
+				<div className="sm:flex absolute top-20 left-0 hidden">
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
 				</div>
-				<div className="flex absolute top-20 right-0 ">
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
-					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20"></div>
+				<div className="sm:flex absolute top-20 right-0 hidden ">
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
+					<div className="backdrop-filter backdrop-blur-3xl w-[30px] h-[520px] bg-opacity-20 hidden lg:block"></div>
 				</div>
-				<div className="absolute top-20 w-[47vw] gap-5 flex flex-col justify-center h-[520px] left-[18%]">
-					<h1 className="text-5xl font-semibold">
-						Empowering Your{" "}
-						<span className="text-[#666666]">Digital Vision</span>
+				<div className="absolute top-[280px] lg:top-[350px] lg:w-[47vw] gap-5 flex flex-col  justify-center transform -translate-y-1/2 max-h-[460px] lg:p-4 min-px-5 mx-10 lg:left-[18%]">
+					<h1 className="lg:text-4xl md:text-2xl text-xl  font-semibold">
+						<span className="text-[#666666]">Empowering Your</span> Digital
+						Vision
 					</h1>
-					<p className="text-[#c7c5c5] text-sm">
+					<p className="text-[#c7c5c5]  sm:text-sm text-xs">
 						At DigitX, we are committed to empowering your digital vision with
 						innovative solutions tailored to your unique needs. Our team of
 						skilled professionals, coupled with cutting-edge technologies,
 						ensures that we deliver exceptional results that elevate your online
-						presence. Whether it\ quote\  s captivating web designs, seamless app
+						presence. Whether it's captivating web designs, seamless app
 						development, effective digital marketing, or other digital
 						solutions, we are dedicated to bringing your ideas to life and
 						helping your business thrive in the dynamic digital landscape.
-						Partner with us today, and let\ quote\  s unlock endless possibilities for
+						Partner with us today, and let's unlock endless possibilities for
 						your digital success!
 					</p>
 				</div>
 			</div>
-
-			<div className="flex flex-col items-center mt-24 max-w-[1280px] mx-auto gap-10">
-				<h1 className="text-center text-3xl font-semibold w-[500px]">
+			<div className="flex flex-col items-center mt-24 w-full sm:max-w-[1280px] p-2 sm:p-10 mx-auto gap-10">
+				<h1 className="text-center text-3xl font-semibold lg:w-[500px]">
 					Key Features <span className="text-[#808080]">of Our Projects</span>
 				</h1>
-				<p className="text-sm text-[#808080] text-center w-[900px]">
+				<p className="text-sm text-[#808080] text-center lg:w-[900px]">
 					Partnering with DigitX offers a multitude of advantages. Experience
 					increased brand visibility, improved customer engagement, and higher
 					ROI. Our tailored solutions are designed to meet your unique business
 					needs, ensuring lasting success.
 				</p>
 				<div className="w-full justify-center flex flex-col gap-10">
-					<div className="flex gap-5 h-[200px] justify-evenly">
-						<div className="w-[28%] h-full flex flex-col p-4 items-center gap-4">
+					<div className="flex lg:flex-row flex-col  gap-5 min-h-[200px] justify-evenly">
+						<div className="lg:w-[28%] h-full flex flex-col p-4 items-center gap-4">
 							<Image src={projectStrategic} width={50} height={50} alt="" />
-							<h4 className="font-semibold text-sm">Strategic planning</h4>
+							<h4 className="font-semibold text-center text-sm">
+								Strategic planning
+							</h4>
 							<p className="text-sm font-thin text-center">
 								Every project begins with thorough research and strategic
-								planning to ensure a holistic understanding of our clients\ quote\  
-								objectives and target audience.
+								planning to ensure a holistic understanding of our
+								clients\'quote\'' objectives and target audience.
 							</p>
 						</div>
+						<div className="border-b border-[#1F1F1F]"></div>
 						<div className="border-r border-[#1F1F1F]"></div>
-						<div className="w-[28%] h-full flex flex-col p-4 items-center gap-4">
+						<div className="lg:w-[28%] h-full flex flex-col p-4 items-center gap-4">
 							<Image src={projectCustomized} width={50} height={50} alt="" />
-							<h4 className="font-semibold text-sm">Customized Solutions</h4>
+							<h4 className="font-semibold text-sm text-center">
+								Customized Solutions
+							</h4>
 							<p className="text-sm font-thin text-center">
-								We believe in tailoring our services to suit each project\ quote\  s
-								unique requirements, resulting in solutions that perfectly align
-								with our clients\ quote\   brand identities.ence.
+								We believe in tailoring our services to suit each
+								project\'quote\''s unique requirements, resulting in solutions
+								that perfectly align with our clients\'quote\'' brand
+								identities.ence.
 							</p>
 						</div>
 						<div className="border-r border-[#1F1F1F]"></div>
-						<div className="w-[28%] h-full items-center p-4 flex flex-col gap-4">
+						<div className="border-b border-[#1F1F1F]"></div>
+						<div className="lg:w-[28%] h-full items-center p-4 flex flex-col gap-4">
 							<Image src={projectUser} width={50} height={50} alt="" />
-							<h4 className="font-semibold text-sm">User-Centric Approach</h4>
+							<h4 className="font-semibold text-sm text-center">
+								User-Centric Approach
+							</h4>
 							<p className="text-sm font-thin text-center">
 								Our projects are designed with the end-user in mind,
 								prioritizing seamless user experiences and intuitive interfaces.
 							</p>
 						</div>
 					</div>
-					<div className="flex gap-5 h-[200px] justify-evenly">
-						<div className="w-[28%] h-full flex flex-col p-4 items-center gap-4">
+					<div className="flex flex-col lg:flex-row gap-5 min-h-[200px] justify-evenly">
+						<div className="lg:w-[28%] h-full flex flex-col p-4 items-center gap-4">
 							<Image src={projectCard} width={50} height={50} alt="" />
-							<h4 className="font-semibold text-sm">
+							<h4 className="font-semibold text-center text-sm">
 								Cutting-Edge Technologies
 							</h4>
 							<p className="text-sm font-thin text-center">
@@ -144,7 +167,8 @@ const Projects = () => {
 							</p>
 						</div>
 						<div className="border-r border-[#1F1F1F]"></div>
-						<div className="w-[28%] h-full items-center p-4 flex flex-col gap-4">
+						<div className="border-b border-[#1F1F1F]"></div>
+						<div className="lg:w-[28%] h-full items-center p-4 flex flex-col gap-4">
 							<Image src={projectCard} width={50} height={50} alt="" />
 							<h4 className="font-semibold text-sm">Timely Delivery</h4>
 							<p className="text-sm font-thin text-center">
@@ -155,30 +179,101 @@ const Projects = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-col items-center mt-24 max-w-[1280px] mx-auto gap-10">
-				<h1 className="text-center text-3xl font-semibold w-[500px]">
+			<div className="flex flex-col items-center mt-24 w-full lg:max-w-[1280px] p-2 lg:p-10 mx-auto gap-10">
+				<h1 className="text-center text-3xl font-semibold w-full lg:w-[500px]">
 					Projects <span className="text-[#808080]">Showcase</span>
 				</h1>
-				<p className="text-sm text-[#808080] text-center w-[900px]">
+				<p className="text-sm text-[#808080] text-center lg:w-[900px]">
 					Witness the brilliance of our previous projects. Our portfolio
-					showcases the successful collaborations we\ quote\  ve had with diverse clients
-					across various industries. Let our work speak for itself.
+					showcases the successful collaborations we\'quote\''ve had with
+					diverse clients across various industries. Let our work speak for
+					itself.
 				</p>
 				<div className="mt-4 flex items-center flex-col w-full ">
-					<div className="w-[80%] flex-col flex gap-2 p-8 h-full rounded-xl border border-[#1F1F1F] ">
-						<div className="h-[400px] rounded-xl relative">
+					<div className="w-[100%] flex-col flex gap-2 md:p-8  p-2 lg:p-4 h-full rounded-xl border border-[#1F1F1F] ">
+						<div className="max-h-[400px] min-h-[250px] rounded-xl relative">
 							<Image
 								src={servicesprotfolio1}
-								className="w-full h-[400px] object-fill rounded-xl"
+								className="w-full max-h-[400px] min-h-[250px] object-fill rounded-xl"
 								width={50000}
 								alt=""
 							/>
 							<div className=" rounded-b-xl absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-[#0f0f0f] to-transparent"></div>
 						</div>
-						<div className="flex justify-between mt-6">
-							<h3>E-Commerce Revolution</h3>
-							<div className="flex gap-4">
-								<button className="text-xs font-thin">Show Less</button>
+						<div className="flex justify-between items-center px-4 mt-6 relative">
+							<h3 className="sm:text-base text-sm">E-Commerce Revolution</h3>
+							<button
+								onClick={() => toggleVisibility(0)}
+								className={`absolute right-3 flex items-center gap-4 text-[10px] sm:text-xs font-thin ${
+									currentVisibleIndex === 0 ? "opacity-0 h-0" : "bg-none"
+								} transition-opacity duration-1000 `}
+							>
+								<span className="sm:block hidden">Show More</span>
+								<svg
+									width="40"
+									height="40"
+									viewBox="0 0 56 56"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect
+										x="0.5"
+										y="0.5"
+										width="55"
+										height="55"
+										rx="27.5"
+										fill="url(#paint0_linear_26_1433)"
+									/>
+									<rect
+										x="0.5"
+										y="0.5"
+										width="55"
+										height="55"
+										rx="27.5"
+										stroke="url(#paint1_linear_26_1433)"
+									/>
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M21.3222 24.0929C21.7402 23.691 22.4049 23.704 22.8069 24.122L28 29.6349L33.1931 24.122C33.5951 23.704 34.2598 23.691 34.6778 24.0929C35.0958 24.4949 35.1088 25.1596 34.7069 25.5776L28.7569 31.8776C28.5589 32.0835 28.2856 32.1998 28 32.1998C27.7144 32.1998 27.4411 32.0835 27.2431 31.8776L21.2931 25.5776C20.8912 25.1596 20.9042 24.4949 21.3222 24.0929Z"
+										fill="white"
+									/>
+									<defs>
+										<linearGradient
+											id="paint0_linear_26_1433"
+											x1="28"
+											y1="0"
+											x2="28"
+											y2="56"
+											gradientUnits="userSpaceOnUse"
+										>
+											<stop stop-color="#1A1A1A" />
+											<stop offset="1" stop-color="#1A1A1A" stop-opacity="0" />
+										</linearGradient>
+										<linearGradient
+											id="paint1_linear_26_1433"
+											x1="28"
+											y1="0"
+											x2="28"
+											y2="56"
+											gradientUnits="userSpaceOnUse"
+										>
+											<stop stop-color="#262626" />
+											<stop offset="1" stop-color="#262626" stop-opacity="0" />
+										</linearGradient>
+									</defs>
+								</svg>
+							</button>
+							<button
+								onClick={() => toggleVisibility(0)}
+								className={`right-3 absolute flex items-center gap-4 text-[10px] sm:text-xs font-thin
+								${
+									currentVisibleIndex === 0
+										? "opacity-100 h-fit"
+										: "opacity-0 h-0"
+								} transition-opacity duration-1000`}
+							>
+								<span className="sm:block hidden">Show Less</span>
 								<svg
 									width="40"
 									height="40"
@@ -233,9 +328,9 @@ const Projects = () => {
 										</linearGradient>
 									</defs>
 								</svg>
-							</div>
+							</button>
 						</div>
-						<div className="text-sm flex gap-4">
+						<div className="text-sm md:flex-row flex-col flex gap-4">
 							<Link
 								href={""}
 								className="px-3 py-[2px] w-fit rounded-full flex justify-center items-center border border-[#1F1F1F] gap-2"
@@ -319,8 +414,8 @@ const Projects = () => {
 								</span>
 							</Link>
 						</div>
-						<div className="border mt-6 border-[#1F1F1F] rounded-xl p-6">
-							<div className="flex flex-col gap-4">
+						<div className="border mt-6 border-[#1F1F1F] rounded-xl lg:p-6 p-2">
+							<div className="flex flex-col gap-4 p-4">
 								<h4 className="font-light">Project Description</h4>
 								<p className="text-sm text-[#8C8C8C]">
 									{" "}
@@ -330,34 +425,51 @@ const Projects = () => {
 									seamless checkout options.
 								</p>
 							</div>
-							<div className="">
-								<div className="w-full mt-6 flex flex-col gap-6">
-									<div className="w-[100%] h-[100px] flex rounded-xl border border-[#1F1F1F] p-4">
-										<div className="w-1/4 h-full p-4 justify-center flex flex-col gap-2">
+							<div
+								className={`${
+									currentVisibleIndex === 0
+										? "opacity-100 h-auto"
+										: "opacity-0 h-0"
+								} transition-opacity duration-1000`}
+							>
+								<div className="w-full items-center mt-6 flex flex-col gap-6">
+									<div className="w-[100%] min-h-[100px] flex lg:flex-row  flex-col rounded-xl border border-[#1F1F1F] p-4">
+										<div className="lg:w-1/4 lg:items-start items-center h-full p-4 justify-center flex flex-col gap-2">
 											<h4 className="font-thin text-sm">Category</h4>
-											<span className="font-light">E-commerce</span>
+											<span className="font-light lg:text-base text-sm">
+												E-commerce
+											</span>
 										</div>
 										<div className="border-r border-[#1F1F1F]"></div>
-										<div className="w-1/4 h-full p-4 justify-center flex flex-col gap-2">
+										<div className="border-b w-[90%] mx-auto lg:hidden block border-[#1F1F1F]"></div>
+										<div className="lg:w-1/4 lg:items-start items-center h-full p-4 justify-center flex flex-col gap-2">
 											<h4 className="font-thin text-sm">Time Taken</h4>
-											<span className="font-light">4 Months</span>
+											<span className="font-light lg:text-base text-sm">
+												4 Months
+											</span>
 										</div>
+										<div className="border-b w-[90%] lg:hidden block mx-auto border-[#1F1F1F]"></div>
 										<div className="border-r border-[#1F1F1F]"></div>
-										<div className="w-1/4 h-full p-4 justify-center flex flex-col gap-2">
+										<div className="lg:w-1/4 lg:items-start items-center h-full p-4 justify-center flex flex-col gap-2">
 											<h4 className="font-thin text-sm">Start Date</h4>
-											<span className="font-light">January 15, 2023</span>
+											<span className="font-light lg:text-base text-sm">
+												January 15, 2023
+											</span>
 										</div>
 										<div className="border-r border-[#1F1F1F]"></div>
-										<div className="w-1/4 h-full p-4 justify-center flex flex-col gap-2">
+										<div className="border-b lg:hidden block w-[90%] mx-auto border-[#1F1F1F]"></div>
+										<div className="lg:w-1/4 lg:items-start items-center h-full p-4 justify-center flex flex-col gap-2">
 											<h4 className="font-thin text-sm">Completed Date</h4>
-											<span className="font-light">May 15, 2023</span>
+											<span className="font-light lg:text-base text-sm">
+												May 15, 2023
+											</span>
 										</div>
 									</div>
-									<div className="w-[100%] h-[100px] flex rounded-xl border border-[#1F1F1F] p-4">
-										<div className="w-[30%] flex items-center px-4">
+									<div className="w-[100%] min-h-[100px] lg:flex-row flex-col items-center justify-around gap-4 flex rounded-xl border border-[#1F1F1F] p-4">
+										<div className=" flex items-center px-4">
 											<h4>Technologies Used</h4>
 										</div>
-										<div className="w-[70%] flex items-center gap-4 px-4">
+										<div className=" flex justify-center items-center gap-4 px-4">
 											<svg
 												width="56"
 												height="56"
@@ -660,17 +772,17 @@ const Projects = () => {
 											</svg>
 										</div>
 									</div>
-									<div className="w-[100%] min-h-[100px] flex flex-col gap-4 rounded-xl border border-[#1F1F1F] p-4">
+									<div className="w-[100%] min-h-[100px]  flex flex-col gap-4 rounded-xl border border-[#1F1F1F] p-4">
 										<div className=" px-4">
 											<h4>Team Members</h4>
 										</div>
-										<div className="flex gap-8 justify-center h-[130px] ">
-											<div className="w-[30%] h-[130px] border border-[#1F1F1F] rounded-xl p-4">
+										<div className="flex flex-col items-center sm:flex-row lg:gap-8 gap-2 justify-center min-h-[130px] ">
+											<div className="sm:w-[33%] w-[250px] h-[130px] border border-[#1F1F1F] rounded-xl p-4">
 												<div className="h-[30%]">
 													<h4>Web Develop</h4>
 												</div>
-												<div className="w-full h-[70%] flex items-center gap-2">
-													<div className="h-full w-[30%] flex  items-center relative">
+												<div className="w-full h-[70%] flex justify-center sm:justify-start items-center gap-8">
+													<div className="h-full sm:w-[30%] flex  items-center relative">
 														<div className="rounded-full w-12 h-12 border border-[#1F1F1F] bg-[#0f0f0f]">
 															<Image height={200} src={avatar1} alt="" />
 														</div>
@@ -678,54 +790,58 @@ const Projects = () => {
 															<Image height={200} src={avatar2} alt="" />
 														</div>
 													</div>
-													<div className="h-full w-[50%] text-sm flex-col flex justify-center gap-2">
-														<span>John Smith , </span>
+													<div className="h-full sm:w-[50%] text-[10px] lg:text-sm flex-col flex justify-center gap-1">
+														<span>John Smith, </span>
 														<span>Emily Johnson</span>
 													</div>
 												</div>
 											</div>
-											<div className="w-[30%] h-[130px] border border-[#1F1F1F] rounded-xl p-4">
+											<div className="sm:w-[33%] w-[250px] h-[130px] border border-[#1F1F1F] rounded-xl p-4">
 												<div className="h-[30%]">
 													<h4>Web Develop</h4>
 												</div>
-												<div className="h-[70%] gap-2 flex items-center">
+												<div className="h-[70%] gap-2 justify-center sm:justify-start flex items-center">
 													<div className="w-12 h-12 rounded-full border border-[#1F1F1F]">
 														<Image height={200} src={avatar1} alt="" />
 													</div>
-													<span className="text-sm">Michael Williams</span>
+													<span className="lg:text-sm text-[10px]">
+														Michael Williams
+													</span>
 												</div>
 											</div>
-											<div className="w-[30%] h-[130px] border border-[#1F1F1F] rounded-xl p-4">
+											<div className="sm:w-[33%] w-[250px] h-[130px] border border-[#1F1F1F] rounded-xl p-4">
 												<div className="h-[30%]">
 													<h4>Web Develop</h4>
 												</div>
-												<div className="h-[70%] gap-2 flex items-center">
+												<div className="h-[70%] gap-2 justify-center sm:justify-start flex items-center">
 													<div className="w-12 h-12 rounded-full border border-[#1F1F1F]">
 														<Image height={200} src={avatar2} alt="" />
 													</div>
-													<span className="text-sm">Michael Williams</span>
+													<span className="lg:text-sm text-[10px]">
+														Michael Williams
+													</span>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div className="w-full h-[160px] flex flex-col justify-between mt-6 rounded-xl border-[#1F1F1F] border p-4">
+								<div className="w-full min-h-[160px] flex flex-col justify-between mt-6 rounded-xl border-[#1F1F1F] border p-4">
 									<h4>Method Used</h4>
-									<div className="flex  p-3 w-full h-[80px] border border-[#1F1F1F] rounded-xl">
-										<div className="flex items-center justify-center w-1/3">
-											<span className="w-[180px] flex justify-center items-center text-sm h-[50px] border border-[#1F1F1F] rounded-full ">
+									<div className="flex sm:flex-row flex-col gap-2 p-3 w-full min-h-[80px] border border-[#1F1F1F] rounded-xl">
+										<div className="flex items-center justify-center sm:w-1/3">
+											<span className="sm:w-[180px] w-full  flex justify-center items-center text-sm h-[50px] border border-[#1F1F1F] rounded-full ">
 												Agile Development
 											</span>
 										</div>
 										<div className="border-r border-[#1F1F1F]"></div>
-										<div className="flex items-center justify-center w-1/3">
-											<span className="w-[180px] flex justify-center items-center text-sm h-[50px] border border-[#1F1F1F] rounded-full ">
+										<div className="flex items-center justify-center sm:w-1/3">
+											<span className="sm:w-[180px] w-full  flex justify-center items-center text-sm h-[50px] border border-[#1F1F1F] rounded-full ">
 												Agile Development
 											</span>
 										</div>
 										<div className="border-r border-[#1F1F1F]"></div>
-										<div className="flex items-center justify-center w-1/3">
-											<span className="w-[180px] flex justify-center items-center text-sm h-[50px] border border-[#1F1F1F] rounded-full ">
+										<div className="flex items-center justify-center ms:w-1/3">
+											<span className="sm:w-[180px] w-full flex justify-center items-center text-sm h-[50px] border border-[#1F1F1F] rounded-full ">
 												Agile Development
 											</span>
 										</div>
@@ -736,20 +852,90 @@ const Projects = () => {
 					</div>
 				</div>
 				<div className="mt-4 flex items-center flex-col w-full ">
-					<div className="w-[80%] flex-col flex gap-2 p-8 h-full rounded-xl border border-[#1F1F1F] ">
-						<div className="h-[400px] rounded-xl relative">
+					<div className="w-[100%] flex-col flex gap-2 md:p-8  p-2 lg:p-4 h-full rounded-xl border border-[#1F1F1F] ">
+						<div className="max-h-[400px] rounded-xl relative">
 							<Image
 								src={servicesprotfolio2}
-								className="w-full h-[400px] object-fill rounded-xl"
+								className="w-full max-h-[400px] min-h-[250px] object-fill rounded-xl"
 								width={50000}
 								alt=""
 							/>
 							<div className=" rounded-b-xl absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-[#0f0f0f] to-transparent"></div>
 						</div>
-						<div className="flex justify-between mt-6">
-							<h3>E-Commerce Revolution</h3>
-							<div className="flex gap-4">
-								<button className="text-xs font-thin">Show Less</button>
+						<div className="flex justify-between items-center px-4 mt-6 relative">
+							<h3 className="sm:text-base text-sm">E-Commerce Revolution</h3>
+							<button
+								onClick={() => toggleVisibility(1)}
+								className={`absolute right-3 flex items-center gap-4 text-[10px] sm:text-xs font-thin ${
+									currentVisibleIndex === 1 ? "opacity-0 h-0" : "bg-none"
+								} transition-opacity duration-1000 `}
+							>
+								<span className="sm:block hidden">Show More</span>
+								<svg
+									width="40"
+									height="40"
+									viewBox="0 0 56 56"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect
+										x="0.5"
+										y="0.5"
+										width="55"
+										height="55"
+										rx="27.5"
+										fill="url(#paint0_linear_26_1433)"
+									/>
+									<rect
+										x="0.5"
+										y="0.5"
+										width="55"
+										height="55"
+										rx="27.5"
+										stroke="url(#paint1_linear_26_1433)"
+									/>
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M21.3222 24.0929C21.7402 23.691 22.4049 23.704 22.8069 24.122L28 29.6349L33.1931 24.122C33.5951 23.704 34.2598 23.691 34.6778 24.0929C35.0958 24.4949 35.1088 25.1596 34.7069 25.5776L28.7569 31.8776C28.5589 32.0835 28.2856 32.1998 28 32.1998C27.7144 32.1998 27.4411 32.0835 27.2431 31.8776L21.2931 25.5776C20.8912 25.1596 20.9042 24.4949 21.3222 24.0929Z"
+										fill="white"
+									/>
+									<defs>
+										<linearGradient
+											id="paint0_linear_26_1433"
+											x1="28"
+											y1="0"
+											x2="28"
+											y2="56"
+											gradientUnits="userSpaceOnUse"
+										>
+											<stop stop-color="#1A1A1A" />
+											<stop offset="1" stop-color="#1A1A1A" stop-opacity="0" />
+										</linearGradient>
+										<linearGradient
+											id="paint1_linear_26_1433"
+											x1="28"
+											y1="0"
+											x2="28"
+											y2="56"
+											gradientUnits="userSpaceOnUse"
+										>
+											<stop stop-color="#262626" />
+											<stop offset="1" stop-color="#262626" stop-opacity="0" />
+										</linearGradient>
+									</defs>
+								</svg>
+							</button>
+							<button
+								onClick={() => toggleVisibility(1)}
+								className={`right-3 absolute flex items-center gap-4 text-[10px] sm:text-xs font-thin
+								${
+									currentVisibleIndex === 1
+										? "opacity-100 h-fit"
+										: "opacity-0 h-0"
+								} transition-opacity duration-1000`}
+							>
+								<span className="sm:block hidden">Show Less</span>
 								<svg
 									width="40"
 									height="40"
@@ -804,9 +990,9 @@ const Projects = () => {
 										</linearGradient>
 									</defs>
 								</svg>
-							</div>
+							</button>
 						</div>
-						<div className="text-sm flex gap-4">
+						<div className="text-sm md:flex-row flex-col flex gap-4">
 							<Link
 								href={""}
 								className="px-3 py-[2px] w-fit rounded-full flex justify-center items-center border border-[#1F1F1F] gap-2"
@@ -901,34 +1087,51 @@ const Projects = () => {
 									seamless checkout options.
 								</p>
 							</div>
-							<div className="hidden">
-								<div className="w-full mt-6 flex flex-col gap-6">
-									<div className="w-[100%] h-[100px] flex rounded-xl border border-[#1F1F1F] p-4">
-										<div className="w-1/4 h-full p-4 justify-center flex flex-col gap-2">
+							<div
+								className={`${
+									currentVisibleIndex === 1
+										? "opacity-100 h-auto"
+										: "opacity-0 h-0"
+								} transition-opacity duration-1000`}
+							>
+								<div className="w-full items-center mt-6 flex flex-col gap-6">
+									<div className="w-[100%] min-h-[100px] flex lg:flex-row  flex-col rounded-xl border border-[#1F1F1F] p-4">
+										<div className="lg:w-1/4 lg:items-start items-center h-full p-4 justify-center flex flex-col gap-2">
 											<h4 className="font-thin text-sm">Category</h4>
-											<span className="font-light">E-commerce</span>
+											<span className="font-light lg:text-base text-sm">
+												E-commerce
+											</span>
 										</div>
 										<div className="border-r border-[#1F1F1F]"></div>
-										<div className="w-1/4 h-full p-4 justify-center flex flex-col gap-2">
+										<div className="border-b w-[90%] mx-auto lg:hidden block border-[#1F1F1F]"></div>
+										<div className="lg:w-1/4 lg:items-start items-center h-full p-4 justify-center flex flex-col gap-2">
 											<h4 className="font-thin text-sm">Time Taken</h4>
-											<span className="font-light">4 Months</span>
+											<span className="font-light lg:text-base text-sm">
+												4 Months
+											</span>
 										</div>
+										<div className="border-b w-[90%] lg:hidden block mx-auto border-[#1F1F1F]"></div>
 										<div className="border-r border-[#1F1F1F]"></div>
-										<div className="w-1/4 h-full p-4 justify-center flex flex-col gap-2">
+										<div className="lg:w-1/4 lg:items-start items-center h-full p-4 justify-center flex flex-col gap-2">
 											<h4 className="font-thin text-sm">Start Date</h4>
-											<span className="font-light">January 15, 2023</span>
+											<span className="font-light lg:text-base text-sm">
+												January 15, 2023
+											</span>
 										</div>
 										<div className="border-r border-[#1F1F1F]"></div>
-										<div className="w-1/4 h-full p-4 justify-center flex flex-col gap-2">
+										<div className="border-b lg:hidden block w-[90%] mx-auto border-[#1F1F1F]"></div>
+										<div className="lg:w-1/4 lg:items-start items-center h-full p-4 justify-center flex flex-col gap-2">
 											<h4 className="font-thin text-sm">Completed Date</h4>
-											<span className="font-light">May 15, 2023</span>
+											<span className="font-light lg:text-base text-sm">
+												May 15, 2023
+											</span>
 										</div>
 									</div>
-									<div className="w-[100%] h-[100px] flex rounded-xl border border-[#1F1F1F] p-4">
-										<div className="w-[30%] flex items-center px-4">
+									<div className="w-[100%] min-h-[100px] lg:flex-row flex-col items-center justify-around gap-4 flex rounded-xl border border-[#1F1F1F] p-4">
+										<div className=" flex items-center px-4">
 											<h4>Technologies Used</h4>
 										</div>
-										<div className="w-[70%] flex items-center gap-4 px-4">
+										<div className=" flex justify-center items-center gap-4 px-4">
 											<svg
 												width="56"
 												height="56"
@@ -1231,17 +1434,17 @@ const Projects = () => {
 											</svg>
 										</div>
 									</div>
-									<div className="w-[100%] min-h-[100px] flex flex-col gap-4 rounded-xl border border-[#1F1F1F] p-4">
+									<div className="w-[100%] min-h-[100px]  flex flex-col gap-4 rounded-xl border border-[#1F1F1F] p-4">
 										<div className=" px-4">
 											<h4>Team Members</h4>
 										</div>
-										<div className="flex gap-8 justify-center h-[130px] ">
-											<div className="w-[30%] h-[130px] border border-[#1F1F1F] rounded-xl p-4">
+										<div className="flex flex-col items-center sm:flex-row lg:gap-8 gap-2 justify-center min-h-[130px] ">
+											<div className="sm:w-[33%] w-[250px] h-[130px] border border-[#1F1F1F] rounded-xl p-4">
 												<div className="h-[30%]">
 													<h4>Web Develop</h4>
 												</div>
-												<div className="w-full h-[70%] flex items-center gap-2">
-													<div className="h-full w-[30%] flex  items-center relative">
+												<div className="w-full h-[70%] flex justify-center sm:justify-start items-center gap-8">
+													<div className="h-full sm:w-[30%] flex  items-center relative">
 														<div className="rounded-full w-12 h-12 border border-[#1F1F1F] bg-[#0f0f0f]">
 															<Image height={200} src={avatar1} alt="" />
 														</div>
@@ -1249,54 +1452,58 @@ const Projects = () => {
 															<Image height={200} src={avatar2} alt="" />
 														</div>
 													</div>
-													<div className="h-full w-[50%] text-sm flex-col flex justify-center gap-2">
-														<span>John Smith , </span>
+													<div className="h-full sm:w-[50%] text-[10px] lg:text-sm flex-col flex justify-center gap-1">
+														<span>John Smith, </span>
 														<span>Emily Johnson</span>
 													</div>
 												</div>
 											</div>
-											<div className="w-[30%] h-[130px] border border-[#1F1F1F] rounded-xl p-4">
+											<div className="sm:w-[33%] w-[250px] h-[130px] border border-[#1F1F1F] rounded-xl p-4">
 												<div className="h-[30%]">
 													<h4>Web Develop</h4>
 												</div>
-												<div className="h-[70%] gap-2 flex items-center">
+												<div className="h-[70%] gap-2 justify-center sm:justify-start flex items-center">
 													<div className="w-12 h-12 rounded-full border border-[#1F1F1F]">
 														<Image height={200} src={avatar1} alt="" />
 													</div>
-													<span className="text-sm">Michael Williams</span>
+													<span className="lg:text-sm text-[10px]">
+														Michael Williams
+													</span>
 												</div>
 											</div>
-											<div className="w-[30%] h-[130px] border border-[#1F1F1F] rounded-xl p-4">
+											<div className="sm:w-[33%] w-[250px] h-[130px] border border-[#1F1F1F] rounded-xl p-4">
 												<div className="h-[30%]">
 													<h4>Web Develop</h4>
 												</div>
-												<div className="h-[70%] gap-2 flex items-center">
+												<div className="h-[70%] gap-2 justify-center sm:justify-start flex items-center">
 													<div className="w-12 h-12 rounded-full border border-[#1F1F1F]">
 														<Image height={200} src={avatar2} alt="" />
 													</div>
-													<span className="text-sm">Michael Williams</span>
+													<span className="lg:text-sm text-[10px]">
+														Michael Williams
+													</span>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div className="w-full h-[160px] flex flex-col justify-between mt-6 rounded-xl border-[#1F1F1F] border p-4">
+								<div className="w-full min-h-[160px] flex flex-col justify-between mt-6 rounded-xl border-[#1F1F1F] border p-4">
 									<h4>Method Used</h4>
-									<div className="flex  p-3 w-full h-[80px] border border-[#1F1F1F] rounded-xl">
-										<div className="flex items-center justify-center w-1/3">
-											<span className="w-[180px] flex justify-center items-center text-sm h-[50px] border border-[#1F1F1F] rounded-full ">
+									<div className="flex sm:flex-row flex-col gap-2 p-3 w-full min-h-[80px] border border-[#1F1F1F] rounded-xl">
+										<div className="flex items-center justify-center sm:w-1/3">
+											<span className="sm:w-[180px] w-full  flex justify-center items-center text-sm h-[50px] border border-[#1F1F1F] rounded-full ">
 												Agile Development
 											</span>
 										</div>
 										<div className="border-r border-[#1F1F1F]"></div>
-										<div className="flex items-center justify-center w-1/3">
-											<span className="w-[180px] flex justify-center items-center text-sm h-[50px] border border-[#1F1F1F] rounded-full ">
+										<div className="flex items-center justify-center sm:w-1/3">
+											<span className="sm:w-[180px] w-full  flex justify-center items-center text-sm h-[50px] border border-[#1F1F1F] rounded-full ">
 												Agile Development
 											</span>
 										</div>
 										<div className="border-r border-[#1F1F1F]"></div>
-										<div className="flex items-center justify-center w-1/3">
-											<span className="w-[180px] flex justify-center items-center text-sm h-[50px] border border-[#1F1F1F] rounded-full ">
+										<div className="flex items-center justify-center ms:w-1/3">
+											<span className="sm:w-[180px] w-full flex justify-center items-center text-sm h-[50px] border border-[#1F1F1F] rounded-full ">
 												Agile Development
 											</span>
 										</div>
@@ -1307,11 +1514,11 @@ const Projects = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-col items-center mt-24 max-w-[1280px] mx-auto gap-10">
-				<h1 className="text-center text-3xl font-semibold w-[500px]">
+			<div className="flex flex-col items-center mt-24 w-full sm:max-w-[1280px] p-2 lg:p-10 mx-auto gap-10">
+				<h1 className="text-center text-3xl font-semibold lg:w-[500px]">
 					Upcoming <span className="text-[#808080]">Projects</span>
 				</h1>
-				<p className="text-sm text-[#808080] text-center w-[900px]">
+				<p className="text-sm text-[#808080] text-center lg:w-[900px]">
 					At DigitX, we are continually working on exciting new projects to push
 					the boundaries of digital innovation and deliver exceptional solutions
 					to our valued clients. While we are thrilled to share our upcoming
@@ -1320,14 +1527,590 @@ const Projects = () => {
 					overview of the upcoming projects while keeping specific details
 					concealed.
 				</p>
-				<div className="mt6 w-full h-[1000px]">
-					<div className="w-full h-1/2 p-6 flex gap-6">
-						<div className="w-1/2 rounded-xl border-[#1F1F1F] border my-BG backdrop-filter backdrop-blur-xl bg-opacity-20"></div>
-						<div className="w-1/2 rounded-xl border-[#1F1F1F] border my-BG backdrop-filter backdrop-blur-xl bg-opacity-20"></div>
+				<div className="mt6 w-full min-h-[1000px]">
+					<div className="w-full h-1/2 lg:p-6 p-2 flex-col lg:flex-row flex gap-8 lg:gap-6  ">
+						<div className="lg:w-1/2 p-5 rounded-xl border-[#1F1F1F] flex flex-col gap-4 border my-BG backdrop-filter backdrop-blur-xl bg-opacity-20 relative">
+							<div className="w-full h-20 flex gap-4 items-center">
+								<svg
+									width="58"
+									height="58"
+									viewBox="0 0 58 58"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<g filter="url(#filter0_i_26_1460)">
+										<rect
+											x="2"
+											y="2"
+											width="54"
+											height="54"
+											rx="27"
+											fill="url(#paint0_linear_26_1460)"
+										/>
+										<rect
+											x="1"
+											y="1"
+											width="56"
+											height="56"
+											rx="28"
+											stroke="#666666"
+											stroke-width="2"
+										/>
+										<path
+											d="M28.9997 38.2082L34.958 41.4582L40.9163 38.2082V30.6248L34.958 34.4165L28.9997 30.6248V38.2082Z"
+											fill="white"
+										/>
+										<path
+											d="M17.083 30.6248L23.0413 27.3748L28.9997 30.6248L23.0413 34.4165V41.4582L17.083 38.2082V30.6248Z"
+											fill="white"
+										/>
+										<path
+											d="M34.958 27.3748L28.9997 30.6248V23.5832L23.0413 19.7915L28.9997 16.5415L34.958 19.7915V27.3748Z"
+											fill="white"
+										/>
+									</g>
+									<defs>
+										<filter
+											id="filter0_i_26_1460"
+											x="0"
+											y="0"
+											width="58"
+											height="58"
+											filterUnits="userSpaceOnUse"
+											color-interpolation-filters="sRGB"
+										>
+											<feFlood flood-opacity="0" result="BackgroundImageFix" />
+											<feBlend
+												mode="normal"
+												in="SourceGraphic"
+												in2="BackgroundImageFix"
+												result="shape"
+											/>
+											<feColorMatrix
+												in="SourceAlpha"
+												type="matrix"
+												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+												result="hardAlpha"
+											/>
+											<feMorphology
+												radius="13"
+												operator="erode"
+												in="SourceAlpha"
+												result="effect1_innerShadow_26_1460"
+											/>
+											<feOffset />
+											<feGaussianBlur stdDeviation="4" />
+											<feComposite
+												in2="hardAlpha"
+												operator="arithmetic"
+												k2="-1"
+												k3="1"
+											/>
+											<feColorMatrix
+												type="matrix"
+												values="0 0 0 0 0.166667 0 0 0 0 0.166667 0 0 0 0 0.166667 0 0 0 0.25 0"
+											/>
+											<feBlend
+												mode="normal"
+												in2="shape"
+												result="effect1_innerShadow_26_1460"
+											/>
+										</filter>
+										<linearGradient
+											id="paint0_linear_26_1460"
+											x1="-5.77273"
+											y1="-8.63637"
+											x2="64.1818"
+											y2="67.0455"
+											gradientUnits="userSpaceOnUse"
+										>
+											<stop />
+											<stop
+												offset="0.256291"
+												stop-color="#E7E7E7"
+												stop-opacity="0.6875"
+											/>
+											<stop
+												offset="0.457331"
+												stop-color="white"
+												stop-opacity="0.34139"
+											/>
+											<stop
+												offset="0.584253"
+												stop-color="white"
+												stop-opacity="0.222774"
+											/>
+											<stop offset="1" stop-color="#666666" />
+										</linearGradient>
+									</defs>
+								</svg>
+								<h3 className="font-semibold">
+									Healthcare Platform Enhancement
+								</h3>
+							</div>
+							<div className="flex items-center w-full h-20 border border-[#1F1F1F] rounded-xl p-3">
+								<div className="h-full w-1/2 flex gap-2 flex-col px-3 justify-center">
+									<h4 className="text-sm text-[#808080]">Category</h4>
+									<span className="text-sm font-light">Web Development</span>
+								</div>
+								<div className="border-r h-full border-[#1F1F1F]"></div>
+								<div className="h-full w-1/2 flex gap-2 flex-col px-6 justify-center">
+									<h4 className="text-sm text-[#808080]">
+										Expected Completion
+									</h4>
+									<span className="text-sm font-light">Q4 2023</span>
+								</div>
+							</div>
+							<div className="flex flex-col justify-center gap-4 p-4  w-full h-full mt-6 border rounded-xl border-[#1F1F1F]">
+								<h3>Project Description</h3>
+								<p className="text-sm  text-[#8C8C8C]">
+									Our team is collaborating with a leading healthcare provider
+									to enhance their existing platform. The project aims to
+									streamline user experiences, optimize database performance,
+									and implement advanced security measures to safeguard patient
+									data. This ambitious undertaking will elevate the platform's
+									capabilities and revolutionize healthcare accessibility for
+									users.
+								</p>
+							</div>
+							<div className=" rounded-b-xl absolute bottom-0 left-0 w-full h-[200px] bg-gradient-to-t from-[#0f0f0f] to-transparent"></div>
+						</div>
+						<div className="lg:w-1/2 p-5 rounded-xl border-[#1F1F1F] flex flex-col gap-4 border my-BG backdrop-filter backdrop-blur-xl bg-opacity-20 relative">
+							<div className="w-full h-20 flex gap-4 items-center">
+								<svg
+									width="58"
+									height="58"
+									viewBox="0 0 58 58"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<g filter="url(#filter0_i_26_1460)">
+										<rect
+											x="2"
+											y="2"
+											width="54"
+											height="54"
+											rx="27"
+											fill="url(#paint0_linear_26_1460)"
+										/>
+										<rect
+											x="1"
+											y="1"
+											width="56"
+											height="56"
+											rx="28"
+											stroke="#666666"
+											stroke-width="2"
+										/>
+										<path
+											d="M28.9997 38.2082L34.958 41.4582L40.9163 38.2082V30.6248L34.958 34.4165L28.9997 30.6248V38.2082Z"
+											fill="white"
+										/>
+										<path
+											d="M17.083 30.6248L23.0413 27.3748L28.9997 30.6248L23.0413 34.4165V41.4582L17.083 38.2082V30.6248Z"
+											fill="white"
+										/>
+										<path
+											d="M34.958 27.3748L28.9997 30.6248V23.5832L23.0413 19.7915L28.9997 16.5415L34.958 19.7915V27.3748Z"
+											fill="white"
+										/>
+									</g>
+									<defs>
+										<filter
+											id="filter0_i_26_1460"
+											x="0"
+											y="0"
+											width="58"
+											height="58"
+											filterUnits="userSpaceOnUse"
+											color-interpolation-filters="sRGB"
+										>
+											<feFlood flood-opacity="0" result="BackgroundImageFix" />
+											<feBlend
+												mode="normal"
+												in="SourceGraphic"
+												in2="BackgroundImageFix"
+												result="shape"
+											/>
+											<feColorMatrix
+												in="SourceAlpha"
+												type="matrix"
+												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+												result="hardAlpha"
+											/>
+											<feMorphology
+												radius="13"
+												operator="erode"
+												in="SourceAlpha"
+												result="effect1_innerShadow_26_1460"
+											/>
+											<feOffset />
+											<feGaussianBlur stdDeviation="4" />
+											<feComposite
+												in2="hardAlpha"
+												operator="arithmetic"
+												k2="-1"
+												k3="1"
+											/>
+											<feColorMatrix
+												type="matrix"
+												values="0 0 0 0 0.166667 0 0 0 0 0.166667 0 0 0 0 0.166667 0 0 0 0.25 0"
+											/>
+											<feBlend
+												mode="normal"
+												in2="shape"
+												result="effect1_innerShadow_26_1460"
+											/>
+										</filter>
+										<linearGradient
+											id="paint0_linear_26_1460"
+											x1="-5.77273"
+											y1="-8.63637"
+											x2="64.1818"
+											y2="67.0455"
+											gradientUnits="userSpaceOnUse"
+										>
+											<stop />
+											<stop
+												offset="0.256291"
+												stop-color="#E7E7E7"
+												stop-opacity="0.6875"
+											/>
+											<stop
+												offset="0.457331"
+												stop-color="white"
+												stop-opacity="0.34139"
+											/>
+											<stop
+												offset="0.584253"
+												stop-color="white"
+												stop-opacity="0.222774"
+											/>
+											<stop offset="1" stop-color="#666666" />
+										</linearGradient>
+									</defs>
+								</svg>
+								<h3 className="font-semibold">
+									AI-Driven Marketing Automation
+								</h3>
+							</div>
+							<div className="flex items-center w-full h-20 border border-[#1F1F1F] rounded-xl p-3">
+								<div className="h-full w-1/2 flex gap-2 flex-col px-3 justify-center">
+									<h4 className="text-sm text-[#808080]">Category</h4>
+									<span className="text-sm font-light">Digital Marketing</span>
+								</div>
+								<div className="border-r h-full border-[#1F1F1F]"></div>
+								<div className="h-full w-1/2 flex gap-2 flex-col px-6 justify-center">
+									<h4 className="text-sm text-[#808080]">
+										Expected Completion
+									</h4>
+									<span className="text-sm font-light">Q1 2024</span>
+								</div>
+							</div>
+							<div className="flex flex-col justify-center gap-4 p-4  w-full h-full mt-6 border rounded-xl border-[#1F1F1F]">
+								<h3>Project Description</h3>
+								<p className="text-sm  text-[#8C8C8C]">
+									We are partnering with a dynamic marketing agency to develop
+									an AI-driven marketing automation platform. This cutting-edge
+									solution will empower businesses to optimize their marketing
+									efforts through data-driven insights, personalized customer
+									interactions, and automated campaign management. The project
+									promises to revolutionize the digital marketing landscape and
+									drive exceptional results for businesses of all sizes.
+								</p>
+							</div>
+							<div className=" rounded-b-xl absolute bottom-0 left-0 w-full h-[200px] bg-gradient-to-t from-[#0f0f0f] to-transparent"></div>
+						</div>
 					</div>
-					<div className="w-full h-1/2 p-6 flex gap-6">
-						<div className="w-1/2 rounded-xl border-[#1F1F1F] border my-BG backdrop-filter backdrop-blur-xl bg-opacity-20"></div>
-						<div className="w-1/2 rounded-xl border-[#1F1F1F] border my-BG backdrop-filter backdrop-blur-xl bg-opacity-20"></div>
+					<div className="w-full h-1/2 lg:p-6 p-2 flex-col lg:flex-row flex lg:gap-6  gap-8">
+						<div className="lg:w-1/2 p-5 rounded-xl border-[#1F1F1F] flex flex-col gap-4 border my-BG backdrop-filter backdrop-blur-xl bg-opacity-20 relative">
+							<div className="w-full h-20 flex gap-4 items-center">
+								<svg
+									width="58"
+									height="58"
+									viewBox="0 0 58 58"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<g filter="url(#filter0_i_26_1460)">
+										<rect
+											x="2"
+											y="2"
+											width="54"
+											height="54"
+											rx="27"
+											fill="url(#paint0_linear_26_1460)"
+										/>
+										<rect
+											x="1"
+											y="1"
+											width="56"
+											height="56"
+											rx="28"
+											stroke="#666666"
+											stroke-width="2"
+										/>
+										<path
+											d="M28.9997 38.2082L34.958 41.4582L40.9163 38.2082V30.6248L34.958 34.4165L28.9997 30.6248V38.2082Z"
+											fill="white"
+										/>
+										<path
+											d="M17.083 30.6248L23.0413 27.3748L28.9997 30.6248L23.0413 34.4165V41.4582L17.083 38.2082V30.6248Z"
+											fill="white"
+										/>
+										<path
+											d="M34.958 27.3748L28.9997 30.6248V23.5832L23.0413 19.7915L28.9997 16.5415L34.958 19.7915V27.3748Z"
+											fill="white"
+										/>
+									</g>
+									<defs>
+										<filter
+											id="filter0_i_26_1460"
+											x="0"
+											y="0"
+											width="58"
+											height="58"
+											filterUnits="userSpaceOnUse"
+											color-interpolation-filters="sRGB"
+										>
+											<feFlood flood-opacity="0" result="BackgroundImageFix" />
+											<feBlend
+												mode="normal"
+												in="SourceGraphic"
+												in2="BackgroundImageFix"
+												result="shape"
+											/>
+											<feColorMatrix
+												in="SourceAlpha"
+												type="matrix"
+												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+												result="hardAlpha"
+											/>
+											<feMorphology
+												radius="13"
+												operator="erode"
+												in="SourceAlpha"
+												result="effect1_innerShadow_26_1460"
+											/>
+											<feOffset />
+											<feGaussianBlur stdDeviation="4" />
+											<feComposite
+												in2="hardAlpha"
+												operator="arithmetic"
+												k2="-1"
+												k3="1"
+											/>
+											<feColorMatrix
+												type="matrix"
+												values="0 0 0 0 0.166667 0 0 0 0 0.166667 0 0 0 0 0.166667 0 0 0 0.25 0"
+											/>
+											<feBlend
+												mode="normal"
+												in2="shape"
+												result="effect1_innerShadow_26_1460"
+											/>
+										</filter>
+										<linearGradient
+											id="paint0_linear_26_1460"
+											x1="-5.77273"
+											y1="-8.63637"
+											x2="64.1818"
+											y2="67.0455"
+											gradientUnits="userSpaceOnUse"
+										>
+											<stop />
+											<stop
+												offset="0.256291"
+												stop-color="#E7E7E7"
+												stop-opacity="0.6875"
+											/>
+											<stop
+												offset="0.457331"
+												stop-color="white"
+												stop-opacity="0.34139"
+											/>
+											<stop
+												offset="0.584253"
+												stop-color="white"
+												stop-opacity="0.222774"
+											/>
+											<stop offset="1" stop-color="#666666" />
+										</linearGradient>
+									</defs>
+								</svg>
+								<h3 className="font-semibold">Educational Learning App</h3>
+							</div>
+							<div className="flex items-center w-full h-20 border border-[#1F1F1F] rounded-xl p-3">
+								<div className="h-full w-1/2 flex gap-2 flex-col px-3 justify-center">
+									<h4 className="text-sm text-[#808080]">Category</h4>
+									<span className="text-sm font-light">E-commerce</span>
+								</div>
+								<div className="border-r h-full border-[#1F1F1F]"></div>
+								<div className="h-full w-1/2 flex gap-2 flex-col px-6 justify-center">
+									<h4 className="text-sm text-[#808080]">
+										Expected Completion
+									</h4>
+									<span className="text-sm font-light">Q4 2024</span>
+								</div>
+							</div>
+							<div className="flex flex-col justify-center gap-4 p-4  w-full h-full mt-6 border rounded-xl border-[#1F1F1F]">
+								<h3>Project Description</h3>
+								<p className="text-sm  text-[#8C8C8C]">
+									We are collaborating with an eco-conscious startup to create
+									an innovative e-commerce platform that promotes sustainable
+									products and environmentally friendly practices. The platform
+									will empower consumers to make eco-conscious choices while
+									supporting sustainable businesses. This project aligns with
+									our commitment to creating digital solutions that contribute
+									to a greener future.
+								</p>
+							</div>
+							<div className=" rounded-b-xl absolute bottom-0 left-0 w-full h-[200px] bg-gradient-to-t from-[#0f0f0f] to-transparent"></div>
+						</div>
+						<div className="lg:w-1/2 p-5 rounded-xl border-[#1F1F1F] flex flex-col gap-4 border my-BG backdrop-filter backdrop-blur-xl bg-opacity-20 relative">
+							<div className="w-full h-20 flex gap-4 items-center">
+								<svg
+									width="58"
+									height="58"
+									viewBox="0 0 58 58"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<g filter="url(#filter0_i_26_1460)">
+										<rect
+											x="2"
+											y="2"
+											width="54"
+											height="54"
+											rx="27"
+											fill="url(#paint0_linear_26_1460)"
+										/>
+										<rect
+											x="1"
+											y="1"
+											width="56"
+											height="56"
+											rx="28"
+											stroke="#666666"
+											stroke-width="2"
+										/>
+										<path
+											d="M28.9997 38.2082L34.958 41.4582L40.9163 38.2082V30.6248L34.958 34.4165L28.9997 30.6248V38.2082Z"
+											fill="white"
+										/>
+										<path
+											d="M17.083 30.6248L23.0413 27.3748L28.9997 30.6248L23.0413 34.4165V41.4582L17.083 38.2082V30.6248Z"
+											fill="white"
+										/>
+										<path
+											d="M34.958 27.3748L28.9997 30.6248V23.5832L23.0413 19.7915L28.9997 16.5415L34.958 19.7915V27.3748Z"
+											fill="white"
+										/>
+									</g>
+									<defs>
+										<filter
+											id="filter0_i_26_1460"
+											x="0"
+											y="0"
+											width="58"
+											height="58"
+											filterUnits="userSpaceOnUse"
+											color-interpolation-filters="sRGB"
+										>
+											<feFlood flood-opacity="0" result="BackgroundImageFix" />
+											<feBlend
+												mode="normal"
+												in="SourceGraphic"
+												in2="BackgroundImageFix"
+												result="shape"
+											/>
+											<feColorMatrix
+												in="SourceAlpha"
+												type="matrix"
+												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+												result="hardAlpha"
+											/>
+											<feMorphology
+												radius="13"
+												operator="erode"
+												in="SourceAlpha"
+												result="effect1_innerShadow_26_1460"
+											/>
+											<feOffset />
+											<feGaussianBlur stdDeviation="4" />
+											<feComposite
+												in2="hardAlpha"
+												operator="arithmetic"
+												k2="-1"
+												k3="1"
+											/>
+											<feColorMatrix
+												type="matrix"
+												values="0 0 0 0 0.166667 0 0 0 0 0.166667 0 0 0 0 0.166667 0 0 0 0.25 0"
+											/>
+											<feBlend
+												mode="normal"
+												in2="shape"
+												result="effect1_innerShadow_26_1460"
+											/>
+										</filter>
+										<linearGradient
+											id="paint0_linear_26_1460"
+											x1="-5.77273"
+											y1="-8.63637"
+											x2="64.1818"
+											y2="67.0455"
+											gradientUnits="userSpaceOnUse"
+										>
+											<stop />
+											<stop
+												offset="0.256291"
+												stop-color="#E7E7E7"
+												stop-opacity="0.6875"
+											/>
+											<stop
+												offset="0.457331"
+												stop-color="white"
+												stop-opacity="0.34139"
+											/>
+											<stop
+												offset="0.584253"
+												stop-color="white"
+												stop-opacity="0.222774"
+											/>
+											<stop offset="1" stop-color="#666666" />
+										</linearGradient>
+									</defs>
+								</svg>
+								<h3 className="font-semibold">Community Engagement Portal</h3>
+							</div>
+							<div className="flex items-center w-full h-20 border border-[#1F1F1F] rounded-xl p-3">
+								<div className="h-full w-1/2 flex gap-2 flex-col px-3 justify-center">
+									<h4 className="text-sm text-[#808080]">Category</h4>
+									<span className="text-sm font-light">Web Development</span>
+								</div>
+								<div className="border-r h-full border-[#1F1F1F]"></div>
+								<div className="h-full w-1/2 flex gap-2 flex-col px-6 justify-center">
+									<h4 className="text-sm text-[#808080]">
+										Expected Completion
+									</h4>
+									<span className="text-sm font-light">Q4 2024</span>
+								</div>
+							</div>
+							<div className="flex flex-col justify-center gap-4 p-4  w-full h-full mt-6 border rounded-xl border-[#1F1F1F]">
+								<h3>Project Description</h3>
+								<p className="text-sm  text-[#8C8C8C]">
+									Our team is excited to be part of a community-driven
+									initiative to develop an engagement portal that connects
+									residents with local services, events, and resources. The
+									portal aims to foster community interactions, promote
+									inclusivity, and enhance the quality of life for residents.
+									This project represents our dedication to using technology for
+									positive social impact.
+								</p>
+							</div>
+							<div className=" rounded-b-xl absolute bottom-0 left-0 w-full h-[200px] bg-gradient-to-t from-[#0f0f0f] to-transparent"></div>
+						</div>
 					</div>
 				</div>
 			</div>
