@@ -4,7 +4,8 @@ import Link from "next/link";
 import serviceLeftAngle from "@/public/serviceLeftAngle.svg";
 import serviceRightAngle from "@/public/serviceRightAngle.svg";
 import profile from "@/public/porfile.png";
-import awardsicons from "@/public/awardsicons.svg";
+import awardsicons from "@/public/awardsIcons.svg";
+
 
 const About = () => {
 	return (
