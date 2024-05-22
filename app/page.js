@@ -61,7 +61,7 @@ export default function Home() {
 				<div className="Hero-section flex md:h-[550px] min-h-[400px]">
 					<div className="flex flex-col gap-10 lg:w-1/2  pt-24 my-element">
 						<div className="flex flex-col m-auto gap-3 max-w-[85%]">
-							<h1 className="xl:text-4xl md:text-2xl text-xl font-semibold ">
+							<h1 className="xl:text-4xl text-2xl font-semibold ">
 								Digital Solution{" "}
 								<span className="text-[#666666]">That Drive Success</span>
 							</h1>

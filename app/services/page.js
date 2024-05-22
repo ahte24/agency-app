@@ -87,7 +87,7 @@ const Services = () => {
 					</div>
 					<div className="absolute top-[280px] lg:top-[350px] lg:w-[47vw] gap-5 flex flex-col  justify-center transform -translate-y-1/2 max-h-[460px] lg:p-4 min-px-5 mx-10 lg:left-[18%]">
 
-						<h1 className="lg:text-4xl md:text-2xl text-xl  font-semibold">
+						<h1 className="xl:text-4xl text-2xl font-semibold">
 							Our Comprehensive{" "}
 							<span className="text-[#666666]">Digital Solutions</span>
 						</h1>

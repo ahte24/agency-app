@@ -2936,7 +2936,7 @@ const About = () => {
 					</div>
 				</div>
 				<div className="flex flex-col items-center mt-24  w-full sm:max-w-[1280px] p-2 sm:p-10 mx-auto gap-10">
-					<h1 className="text-center text-3xl font-semibold lg:w-[500px]">
+					<h1 className="text-center xl:text-4xl text-2xl font-semibold lg:w-[500px]">
 						<span className="text-[#808080]">Our</span> Awards & Recognitions
 					</h1>
 					<p className="text-sm text-[#808080] text-center lg:w-[900px]">

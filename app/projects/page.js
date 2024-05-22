@@ -180,7 +180,7 @@ const Projects = () => {
 				</div>
 			</div>
 			<div className="flex flex-col items-center mt-24 w-full lg:max-w-[1280px] p-2 lg:p-10 mx-auto gap-10">
-				<h1 className="text-center text-3xl font-semibold w-full lg:w-[500px]">
+				<h1 className="text-center xl:text-4xl text-2xl font-semibold w-full lg:w-[500px]">
 					Projects <span className="text-[#808080]">Showcase</span>
 				</h1>
 				<p className="text-sm text-[#808080] text-center lg:w-[900px]">
