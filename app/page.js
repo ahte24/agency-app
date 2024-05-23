@@ -1540,13 +1540,7 @@ export default function Home() {
 								within 24 hours.
 							</p>
 						</div>
-						<form
-							className="flex flex-col gap-4"
-							name="contact"
-							method="POST"
-							action="/pages/success"
-							data-netlify="true"
-						>
+						<form className="flex flex-col gap-4" action="">
 							<input type="hidden" name="form-name" value="contact" />
 
 							<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
