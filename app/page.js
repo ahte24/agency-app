@@ -1544,6 +1544,7 @@ export default function Home() {
 							className="flex flex-col gap-4"
 							name="contact"
 							method="POST"
+							onSubmit="submit"
 							data-netlify="true"
 						>
 							<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
