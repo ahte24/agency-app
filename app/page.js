@@ -1544,9 +1544,11 @@ export default function Home() {
 							className="flex flex-col gap-4"
 							name="contact"
 							method="POST"
-							onSubmit="submit"
+							action="/pages/success"
 							data-netlify="true"
 						>
+							<input type="hidden" name="form-name" value="contact" />
+
 							<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
 									<label
@@ -1558,6 +1560,7 @@ export default function Home() {
 									<input
 										type="text"
 										name="name"
+										id="name"
 										required
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
 										placeholder="Name"
@@ -1573,6 +1576,7 @@ export default function Home() {
 									<input
 										type="email"
 										name="email"
+										id="email"
 										required
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
 										placeholder="Enter your Email"
@@ -1627,7 +1631,7 @@ export default function Home() {
 										placeholder="Enter Organization Name"
 									/>
 								</div>
-								<div data-netlify-recaptcha=" true "></div>
+
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
 									<label
 										htmlFor="Subject"
@@ -1635,7 +1639,6 @@ export default function Home() {
 									>
 										Subject
 									</label>
-
 									<input
 										type="text"
 										name="subject"
@@ -1674,8 +1677,8 @@ export default function Home() {
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
+											fillRule="evenodd"
+											clipRule="evenodd"
 											d="M5.33398 11.9999C5.33398 11.42 5.79065 10.9499 6.35398 10.9499H15.3816L12.447 8.20678C12.0409 7.80484 12.0283 7.14015 12.4187 6.72214C12.8092 6.30413 13.4549 6.2911 13.861 6.69303L18.621 11.243C18.821 11.441 18.934 11.7143 18.934 11.9999C18.934 12.2855 18.821 12.5588 18.621 12.7568L13.861 17.3068C13.4549 17.7087 12.8092 17.6957 12.4187 17.2777C12.0283 16.8597 12.0409 16.195 12.447 15.793L15.3816 13.0499H6.35398C5.79065 13.0499 5.33398 12.5798 5.33398 11.9999Z"
 											fill="white"
 										/>
