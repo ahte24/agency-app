@@ -9,7 +9,7 @@ const Contact = () => {
 		<>
 			<main>
 				<div className="Herro-Section">
-					<div className="lg:h-[550px] min-h-[400px] my-cardBG flex relative">
+					<div className="lg:h-[500px] min-h-[400px] my-cardBG flex relative">
 						<div className="w-1/3 pt-20 lg:flex hidden">
 							<Image src={serviceLeftAngle} width={600} height={700} alt="" />
 						</div>
@@ -643,37 +643,35 @@ const Contact = () => {
 						</div>
 					</div>
 				</div>
-				<div className="flex flex-col items-center mt-24 p-4 w-full sm:max-w-[1280px] mx-auto gap-5 relative">
-					<div className="xl:max-w-[1280px] h-[700px] mx-auto border border-[#262626] rounded-2xl  my-cardBG flex flex-col items-center">
-						<div className="mt-16 xl:w-[900px] flex flex-col gap-5 px-10">
-							<h1 className="text-2xl font-semibold text-center">
-								Ready to Transform Your Digital Presence?
-							</h1>
-							<p className="text-sm text-center text-[#808080]">
-								Take the first step towards digital success with DigitX by your
-								side. Our team of experts is eager to craft tailored solutions
-								that drive growth for your business. Whether you need a stunning
-								website, a powerful mobile app, or a data-driven marketing
-								campaign, we ve got you covered. Let s embark on this
-								transformative journey together.
-							</p>
+				<div className=" mt-24  mx-5 min-h-[700px]  border border-[#262626] rounded-2xl p-5  my-cardBG flex flex-col items-center">
+					<div className="mt-16 xl:w-[900px] flex flex-col gap-5 lg:px-10">
+						<h1 className="text-2xl font-semibold text-center">
+							Ready to Transform Your Digital Presence?
+						</h1>
+						<p className="text-sm text-center text-[#808080]">
+							Take the first step towards digital success with DigitX by your
+							side. Our team of experts is eager to craft tailored solutions
+							that drive growth for your business. Whether you need a stunning
+							website, a powerful mobile app, or a data-driven marketing
+							campaign, we ve got you covered. Let s embark on this
+							transformative journey together.
+						</p>
+					</div>
+					<div className="mt-12 flex flex-col items-center gap-3">
+						<span className="text-sm text-center font-semibold">
+							Unlock your digital potential today
+						</span>
+						<div className="flex gap-3">
+							<button className="text-xs px-2 lg:px-4 py-2 lg:py-3 bg-white rounded-full text-black">
+								Get Started
+							</button>
+							<button className="text-xs px-2 lg:px-4 py-2 lg:py-3  bg-[#1A1A1A] rounded-full  border border-[#262626]">
+								Free Consultation
+							</button>
 						</div>
-						<div className="mt-12 flex flex-col items-center gap-3">
-							<span className="text-sm font-semibold">
-								Unlock your digital potential today
-							</span>
-							<div className="flex gap-3">
-								<button className="text-xs px-4 py-3 bg-white rounded-full text-black">
-									Get Started
-								</button>
-								<button className="text-xs px-4 py-3  bg-[#1A1A1A] rounded-full  border border-[#262626]">
-									Free Consultation
-								</button>
-							</div>
-						</div>
-						<div className="h-[800px] w-full flex justify-center items-center">
-							<h1 className="text-4xl">LOGO</h1>
-						</div>
+					</div>
+					<div className="h-[390px] w-full flex justify-center items-center">
+						<h1 className="text-4xl">LOGO</h1>
 					</div>
 				</div>
 			</main>

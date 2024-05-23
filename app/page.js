@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 import "./globals.css";
 import Link from "next/link";
@@ -20,6 +20,7 @@ import workCardIconThree from "../public/workCardIconThree.svg";
 import workCardIconFour from "../public/workCardIconFour.svg";
 import cardLogo from "../public/cardLogo.svg";
 import thirdPartner from "../public/thirdPartner.svg";
+import profile from "../public/porfile.png";
 
 export default function Home() {
 	const [isHidden1, setIsHidden1] = useState(true);
@@ -55,6 +56,45 @@ export default function Home() {
 	const toggleVisibility = () => {
 		setIsHidden(!isHidden);
 	};
+
+	const testimonials = [
+		{
+			quote:
+				"Working with DigitX was a pleasure. Their web design team created a stunning website that perfectly captured our brand essence. The feedback from our customers has been overwhelmingly positive.",
+			name: "Mark Roberts",
+			title: "Founder of GreenEarth Eco Store",
+			image: profile,
+		},
+		{
+			quote:
+				"DigitX transformed our online presence, bringing our vision to life. The website they built for us is not only visually stunning but also highly functional.",
+			name: "Jane Doe",
+			title: "CEO of TechWorld",
+			image: profile,
+		},
+		{
+			quote:
+				"We have seen a significant increase in traffic and engagement since DigitX revamped our site. Their team's expertise is unmatched.",
+			name: "John Smith",
+			title: "Marketing Director at SalesCorp",
+			image: profile,
+		},
+		{
+			quote:
+				"We have seen a significant increase in traffic and engagement since DigitX revamped our site. Their team's expertise is unmatched.",
+			name: "John Smith",
+			title: "Marketing Director at SalesCorp",
+			image: profile,
+		},
+		{
+			quote:
+				"We have seen a significant increase in traffic and engagement since DigitX revamped our site. Their team's expertise is unmatched.",
+			name: "John Smith",
+			title: "Marketing Director at SalesCorp",
+			image: profile,
+		},
+	];
+
 	return (
 		<>
 			<main className=" mx-auto ">
@@ -65,6 +105,7 @@ export default function Home() {
 								Digital Solution{" "}
 								<span className="text-[#666666]">That Drive Success</span>
 							</h1>
+
 							<p className="md:text-sm text-xs text-[#808080]  min-h-[120px]">
 								At DigitX, we believe in the transformative power of digital
 								solutions. Our team of experts is dedicated to helping
@@ -103,15 +144,15 @@ export default function Home() {
 						ROI. Our tailored solutions are designed to meet your unique
 						business needs, ensuring lasting success.
 					</p>
-					<div className="Items-container gap-[40px] flex flex-col mt-16">
-						<div className="flex md:flex-row flex-col gap-[40px] min-h-[240px]">
-							<div className="first-item md:max:w-[373.33px] flex flex-col items-center gap-5">
+					<div className="Items-container gap-[40px] flex flex-col mt-16 transition-all duration-300">
+						<div className="flex lg:flex-row flex-col gap-[40px] min-h-[240px] transition-all duration-200">
+							<div className="first-item lg:w-1/3 flex flex-col items-center gap-5">
 								<Image src={iconOne} alt="" width={70} height={70} />
-								<div className="flex flex-col gap-3">
-									<h3 className="text-[18px] font-semibold text-center">
+								<div className="flex items-center flex-col gap-3">
+									<h3 className="xl:text-[18px] font-semibold text-center">
 										Expertise That Drives Results
 									</h3>
-									<p className="text-sm text-center text-[#8C8C8C]">
+									<p className="text-sm text-center w-[90%] text-[#8C8C8C]">
 										Our team of seasoned professionals brings years of
 										experience and expertise to the table.
 									</p>
@@ -141,13 +182,14 @@ export default function Home() {
 								</Link>
 							</div>
 							<div className="border-r border-[#1F1F1F]"></div>
-							<div className="second-item md:max-w-[373.33px] flex flex-col items-center gap-5">
+							<div className="border-b lg:hidden block border-[#1F1F1F]"></div>
+							<div className="second-item lg:w-1/3 flex flex-col items-center gap-5">
 								<Image src={iconTwo} alt="" width={70} height={70} />
-								<div className="flex flex-col gap-3">
-									<h3 className="text-[18px] font-semibold text-center">
+								<div className="flex items-center flex-col gap-3">
+									<h3 className="xl:text-[18px] font-semibold text-center">
 										Tailored Business Solutions
 									</h3>
-									<p className="text-sm text-center text-[#8C8C8C]">
+									<p className="text-sm text-center w-[90%] text-[#8C8C8C]">
 										We understand that every business is unique. That s why our
 										solutions are customized.
 									</p>
@@ -177,13 +219,14 @@ export default function Home() {
 								</Link>
 							</div>
 							<div className="border-r border-[#1F1F1F]"></div>
-							<div className="Third-item md:max-w-[373.33px] flex flex-col items-center gap-5">
+							<div className="border-b lg:hidden block border-[#1F1F1F]"></div>
+							<div className="Third-item lg:w-1/3 flex flex-col items-center gap-5">
 								<Image src={iconThree} alt="" width={70} height={70} />
-								<div className="flex flex-col gap-3">
-									<h3 className="text-[18px] font-semibold text-center">
+								<div className="flex flex-col items-center gap-3">
+									<h3 className="xl:text-[18px] font-semibold text-center">
 										Cutting-Edge Web Design
 									</h3>
-									<p className="text-sm text-center text-[#8C8C8C]">
+									<p className="text-sm text-center w-[90%] text-[#8C8C8C]">
 										Leave a lasting impression on your audience with our
 										top-notch web design services.
 									</p>
@@ -214,14 +257,14 @@ export default function Home() {
 							</div>
 						</div>
 						<div className=" border-b border-[#1F1F1F]"></div>
-						<div className="flex md:flex-row flex-col gap-[40px] min-h-[240px]">
-							<div className=" md:max-w-[373.33px] flex flex-col items-center gap-5">
+						<div className="flex lg:flex-row flex-col gap-[40px] min-h-[240px] transition-all duration-200">
+							<div className="fourth-item lg:w-1/3 flex flex-col items-center gap-5">
 								<Image src={iconFourth} alt="" width={70} height={70} />
-								<div className="flex flex-col gap-3">
+								<div className="flex flex-col items-center gap-3">
 									<h3 className="text-[18px] font-semibold text-center">
 										Mobile-First Approach
 									</h3>
-									<p className="text-sm text-center text-[#8C8C8C]">
+									<p className="text-sm text-center w-[90%] text-[#8C8C8C]">
 										In today s mobile-centric world, we prioritize mobile-first
 										design to ensure your website.
 									</p>
@@ -250,14 +293,15 @@ export default function Home() {
 									</div>
 								</Link>
 							</div>
+							<div className="border-b lg:hidden block border-[#1F1F1F]"></div>
 							<div className="border-r border-[#1F1F1F]"></div>
-							<div className=" md:max-w-[373.33px] flex flex-col items-center gap-5">
+							<div className=" fifth-item lg:w-1/3 flex flex-col items-center gap-5">
 								<Image src={iconFifth} alt="" width={70} height={70} />
-								<div className="flex flex-col gap-3">
+								<div className="flex flex-col items-center gap-3">
 									<h3 className="text-[18px] font-semibold text-center">
 										Marketing Strategies
 									</h3>
-									<p className="text-sm text-center text-[#8C8C8C]">
+									<p className="text-sm w-[90%]  text-center text-[#8C8C8C]">
 										Our data-driven marketing strategies allow us to target the
 										right audience with precision
 									</p>
@@ -286,14 +330,15 @@ export default function Home() {
 									</div>
 								</Link>
 							</div>
+							<div className="border-b lg:hidden block border-[#1F1F1F]"></div>
 							<div className="border-r border-[#1F1F1F]"></div>
-							<div className=" md:max-w-[373.33px] flex flex-col items-center gap-5">
+							<div className=" sixth-item lg:w-1/3 flex flex-col items-center gap-5">
 								<Image src={iconSixth} alt="" width={70} height={70} />
-								<div className="flex flex-col gap-3">
-									<h3 className="text-[18px] font-semibold text-center">
+								<div className="flex flex-col items-center gap-3">
+									<h3 className="xl:text-[18px]  font-semibold text-center">
 										Search Engine Optimization
 									</h3>
-									<p className="text-sm text-center text-[#8C8C8C]">
+									<p className="text-sm w-[90%] text-center text-[#8C8C8C]">
 										(SEO) Mastery Boost your online visibility with our expert
 										SEO techniques.
 									</p>
@@ -716,7 +761,7 @@ export default function Home() {
 					</Link>
 				</div>
 				<div className="flex flex-col items-center mt-24  w-full sm:max-w-[1280px] mx-auto gap-10 relative">
-					<div className="absolute left-0 bottom-0 w-60 h-[350px] bg-gradient-to-r from-[#0f0f0f] to-transparent hidden sm:block"></div>
+					<div className="absolute w-72 left-0 bottom-0 h-[350px] bg-gradient-to-r from-[#0f0f0f] to-transparent hidden lg:block z-20"></div>
 
 					<h1 className="text-center text-3xl font-semibold xl:w-[500px]">
 						<span className="text-[#808080]">Our</span> Testimonials
@@ -726,286 +771,79 @@ export default function Home() {
 						have to say about their experience with DigitX. We take pride in
 						building lasting relationships and delivering exceptional results.
 					</p>
-					<div className="w-full flex gap-4 p-5 h-[350px] overflow-x-auto no-scrollbar ">
-						<div className="h-full w-[350px]">
-							<div className="flex flex-col gap-6 sm:w-[350px] w-[300px] sm:h-[70%] h-[65%] border border-[#262626] rounded-2xl p-5 bg-gradient-to-b from-[#1a1a1a]  to-transparent via-[#1a1a1a59]">
-								<svg
-									width="45"
-									height="44"
-									viewBox="0 0 45 44"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<rect
-										x="1.25"
-										y="0.5"
-										width="43"
-										height="43"
-										rx="5.5"
-										fill="#1A1A1A"
-									/>
-									<rect
-										x="1.25"
-										y="0.5"
-										width="43"
-										height="43"
-										rx="5.5"
-										stroke="#262626"
-									/>
-									<path
-										d="M30.7025 17.9207C30.7147 18.097 30.7147 18.2733 30.7147 18.4513C30.7147 23.8732 26.5871 30.1263 19.0397 30.1263V30.123C16.8101 30.1263 14.6269 29.4876 12.75 28.2835C13.0742 28.3225 13.4 28.342 13.7266 28.3428C15.5743 28.3444 17.3691 27.7245 18.8227 26.5829C17.0669 26.5496 15.5272 25.4048 14.9893 23.7334C15.6044 23.8521 16.2381 23.8277 16.8418 23.6627C14.9275 23.276 13.5503 21.5941 13.5503 19.6408C13.5503 19.6229 13.5503 19.6059 13.5503 19.5888C14.1207 19.9065 14.7593 20.0828 15.4126 20.1023C13.6096 18.8974 13.0539 16.4988 14.1426 14.6235C16.2259 17.187 19.2997 18.7454 22.5993 18.9104C22.2686 17.4852 22.7203 15.9918 23.7864 14.99C25.439 13.4365 28.0382 13.5161 29.5918 15.1679C30.5107 14.9867 31.3915 14.6495 32.1975 14.1718C31.8912 15.1216 31.2501 15.9284 30.3937 16.4411C31.207 16.3453 32.0017 16.1275 32.75 15.7952C32.1991 16.6207 31.5052 17.3398 30.7025 17.9207Z"
-										fill="white"
-									/>
-								</svg>
-								<p className="sm:text-sm text-xs ">
-									Working with DigitX was a pleasure. Their web design team
-									created a stunning website that perfectly captured our brand s
-									essence. The feedback from our customers has been
-									overwhelmingly positive.
-								</p>
-							</div>
-							<div className="ml-5">
-								<svg
-									width="33"
-									height="16"
-									viewBox="0 0 33 16"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M21.3395 13.55C18.9421 16.3969 14.5579 16.3969 12.1605 13.55L0.75 0L32.75 2.74432e-06L21.3395 13.55Z"
-										fill="#262626"
-									/>
-								</svg>
-							</div>
-							<div className="mt-6 flex items-center gap-2">
-								<Image
-									className="rounded-[50%] w-9 h-9 object-cover"
-									width={300}
-									height={300}
-									src="/porfile.png"
-									alt=""
-								/>
-								<div className="flex flex-col justify-center">
-									<h3 className="font-semibold sm:text-base text-sm">
-										Mark Roberts
-									</h3>
-									<span className="text-[#808080] text-xs sm:text-sm">
-										Founder of GreenEarth Eco Store
-									</span>
+					<div className="w-full  h-[300px] overflow-x-auto no-scrollbar ">
+						<div className="flex gap-4 w-full animate-scroll">
+							{testimonials.map((testimonial, index) => (
+								<div key={index} className="h-full w-[350px]">
+									<div className="flex flex-col gap-6 sm:w-[350px] w-[300px] h-[200px] border border-[#262626] rounded-2xl p-5 bg-gradient-to-b from-[#1a1a1a] to-transparent via-[#1a1a1a59]">
+										<svg
+											width="45"
+											height="44"
+											viewBox="0 0 45 44"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<rect
+												x="1.25"
+												y="0.5"
+												width="43"
+												height="43"
+												rx="5.5"
+												fill="#1A1A1A"
+											/>
+											<rect
+												x="1.25"
+												y="0.5"
+												width="43"
+												height="43"
+												rx="5.5"
+												stroke="#262626"
+											/>
+											<path
+												d="M30.7025 17.9207C30.7147 18.097 30.7147 18.2733 30.7147 18.4513C30.7147 23.8732 26.5871 30.1263 19.0397 30.1263V30.123C16.8101 30.1263 14.6269 29.4876 12.75 28.2835C13.0742 28.3225 13.4 28.342 13.7266 28.3428C15.5743 28.3444 17.3691 27.7245 18.8227 26.5829C17.0669 26.5496 15.5272 25.4048 14.9893 23.7334C15.6044 23.8521 16.2381 23.8277 16.8418 23.6627C14.9275 23.276 13.5503 21.5941 13.5503 19.6408C13.5503 19.6229 13.5503 19.6059 13.5503 19.5888C14.1207 19.9065 14.7593 20.0828 15.4126 20.1023C13.6096 18.8974 13.0539 16.4988 14.1426 14.6235C16.2259 17.187 19.2997 18.7454 22.5993 18.9104C22.2686 17.4852 22.7203 15.9918 23.7864 14.99C25.439 13.4365 28.0382 13.5161 29.5918 15.1679C30.5107 14.9867 31.3915 14.6495 32.1975 14.1718C31.8912 15.1216 31.2501 15.9284 30.3937 16.4411C31.207 16.3453 32.0017 16.1275 32.75 15.7952C32.1991 16.6207 31.5052 17.3398 30.7025 17.9207Z"
+												fill="white"
+											/>
+										</svg>
+										<p className="md:text-sm text-[12px]">
+											{testimonial.quote}
+										</p>
+									</div>
+									<div className="ml-5">
+										<svg
+											width="33"
+											height="16"
+											viewBox="0 0 33 16"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M21.3395 13.55C18.9421 16.3969 14.5579 16.3969 12.1605 13.55L0.75 0L32.75 2.74432e-06L21.3395 13.55Z"
+												fill="#262626"
+											/>
+										</svg>
+									</div>
+									<div className="mt-6 flex items-center gap-2">
+										<Image
+											className="rounded-[50%] w-9 h-9 object-cover"
+											width={300}
+											height={300}
+											src={testimonial.image}
+											alt=""
+										/>
+										<div className="flex flex-col justify-center">
+											<h3 className="font-semibold sm:text-base text-sm">
+												{testimonial.name}
+											</h3>
+											<span className="text-[#808080] text-xs sm:text-sm">
+												{testimonial.title}
+											</span>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-
-						<div className="h-full w-[350px]">
-							<div className="flex flex-col gap-6 sm:w-[350px] w-[300px] sm:h-[70%] h-[65%] border border-[#262626] rounded-2xl p-5 bg-gradient-to-b from-[#1a1a1a]  to-transparent via-[#1a1a1a59]">
-								<svg
-									width="45"
-									height="44"
-									viewBox="0 0 45 44"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<rect
-										x="1.25"
-										y="0.5"
-										width="43"
-										height="43"
-										rx="5.5"
-										fill="#1A1A1A"
-									/>
-									<rect
-										x="1.25"
-										y="0.5"
-										width="43"
-										height="43"
-										rx="5.5"
-										stroke="#262626"
-									/>
-									<path
-										d="M30.7025 17.9207C30.7147 18.097 30.7147 18.2733 30.7147 18.4513C30.7147 23.8732 26.5871 30.1263 19.0397 30.1263V30.123C16.8101 30.1263 14.6269 29.4876 12.75 28.2835C13.0742 28.3225 13.4 28.342 13.7266 28.3428C15.5743 28.3444 17.3691 27.7245 18.8227 26.5829C17.0669 26.5496 15.5272 25.4048 14.9893 23.7334C15.6044 23.8521 16.2381 23.8277 16.8418 23.6627C14.9275 23.276 13.5503 21.5941 13.5503 19.6408C13.5503 19.6229 13.5503 19.6059 13.5503 19.5888C14.1207 19.9065 14.7593 20.0828 15.4126 20.1023C13.6096 18.8974 13.0539 16.4988 14.1426 14.6235C16.2259 17.187 19.2997 18.7454 22.5993 18.9104C22.2686 17.4852 22.7203 15.9918 23.7864 14.99C25.439 13.4365 28.0382 13.5161 29.5918 15.1679C30.5107 14.9867 31.3915 14.6495 32.1975 14.1718C31.8912 15.1216 31.2501 15.9284 30.3937 16.4411C31.207 16.3453 32.0017 16.1275 32.75 15.7952C32.1991 16.6207 31.5052 17.3398 30.7025 17.9207Z"
-										fill="white"
-									/>
-								</svg>
-								<p className="sm:text-sm text-xs ">
-									Working with DigitX was a pleasure. Their web design team
-									created a stunning website that perfectly captured our brand s
-									essence. The feedback from our customers has been
-									overwhelmingly positive.
-								</p>
-							</div>
-							<div className="ml-5">
-								<svg
-									width="33"
-									height="16"
-									viewBox="0 0 33 16"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M21.3395 13.55C18.9421 16.3969 14.5579 16.3969 12.1605 13.55L0.75 0L32.75 2.74432e-06L21.3395 13.55Z"
-										fill="#262626"
-									/>
-								</svg>
-							</div>
-							<div className="mt-6 flex items-center gap-2">
-								<Image
-									className="rounded-[50%] w-9 h-9 object-cover"
-									width={300}
-									height={300}
-									src="/porfile.png"
-									alt=""
-								/>
-								<div className="flex flex-col justify-center">
-									<h3 className="font-semibold sm:text-base text-sm">
-										Mark Roberts
-									</h3>
-									<span className="text-[#808080] text-xs sm:text-sm">
-										Founder of GreenEarth Eco Store
-									</span>
-								</div>
-							</div>
-						</div>
-						<div className="h-full w-[350px]">
-							<div className="flex flex-col gap-6 sm:w-[350px] w-[300px] sm:h-[70%] h-[65%] border border-[#262626] rounded-2xl p-5 bg-gradient-to-b from-[#1a1a1a]  to-transparent via-[#1a1a1a59]">
-								<svg
-									width="45"
-									height="44"
-									viewBox="0 0 45 44"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<rect
-										x="1.25"
-										y="0.5"
-										width="43"
-										height="43"
-										rx="5.5"
-										fill="#1A1A1A"
-									/>
-									<rect
-										x="1.25"
-										y="0.5"
-										width="43"
-										height="43"
-										rx="5.5"
-										stroke="#262626"
-									/>
-									<path
-										d="M30.7025 17.9207C30.7147 18.097 30.7147 18.2733 30.7147 18.4513C30.7147 23.8732 26.5871 30.1263 19.0397 30.1263V30.123C16.8101 30.1263 14.6269 29.4876 12.75 28.2835C13.0742 28.3225 13.4 28.342 13.7266 28.3428C15.5743 28.3444 17.3691 27.7245 18.8227 26.5829C17.0669 26.5496 15.5272 25.4048 14.9893 23.7334C15.6044 23.8521 16.2381 23.8277 16.8418 23.6627C14.9275 23.276 13.5503 21.5941 13.5503 19.6408C13.5503 19.6229 13.5503 19.6059 13.5503 19.5888C14.1207 19.9065 14.7593 20.0828 15.4126 20.1023C13.6096 18.8974 13.0539 16.4988 14.1426 14.6235C16.2259 17.187 19.2997 18.7454 22.5993 18.9104C22.2686 17.4852 22.7203 15.9918 23.7864 14.99C25.439 13.4365 28.0382 13.5161 29.5918 15.1679C30.5107 14.9867 31.3915 14.6495 32.1975 14.1718C31.8912 15.1216 31.2501 15.9284 30.3937 16.4411C31.207 16.3453 32.0017 16.1275 32.75 15.7952C32.1991 16.6207 31.5052 17.3398 30.7025 17.9207Z"
-										fill="white"
-									/>
-								</svg>
-								<p className="sm:text-sm text-xs ">
-									Working with DigitX was a pleasure. Their web design team
-									created a stunning website that perfectly captured our brand s
-									essence. The feedback from our customers has been
-									overwhelmingly positive.
-								</p>
-							</div>
-							<div className="ml-5">
-								<svg
-									width="33"
-									height="16"
-									viewBox="0 0 33 16"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M21.3395 13.55C18.9421 16.3969 14.5579 16.3969 12.1605 13.55L0.75 0L32.75 2.74432e-06L21.3395 13.55Z"
-										fill="#262626"
-									/>
-								</svg>
-							</div>
-							<div className="mt-6 flex items-center gap-2">
-								<Image
-									className="rounded-[50%] w-9 h-9 object-cover"
-									width={300}
-									height={300}
-									src="/porfile.png"
-									alt=""
-								/>
-								<div className="flex flex-col justify-center">
-									<h3 className="font-semibold sm:text-base text-sm">
-										Mark Roberts
-									</h3>
-									<span className="text-[#808080] text-xs sm:text-sm">
-										Founder of GreenEarth Eco Store
-									</span>
-								</div>
-							</div>
-						</div>
-						<div className="h-full w-[350px]">
-							<div className="flex flex-col gap-6 sm:w-[350px] w-[300px] sm:h-[70%] h-[65%] border border-[#262626] rounded-2xl p-5 bg-gradient-to-b from-[#1a1a1a]  to-transparent via-[#1a1a1a59]">
-								<svg
-									width="45"
-									height="44"
-									viewBox="0 0 45 44"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<rect
-										x="1.25"
-										y="0.5"
-										width="43"
-										height="43"
-										rx="5.5"
-										fill="#1A1A1A"
-									/>
-									<rect
-										x="1.25"
-										y="0.5"
-										width="43"
-										height="43"
-										rx="5.5"
-										stroke="#262626"
-									/>
-									<path
-										d="M30.7025 17.9207C30.7147 18.097 30.7147 18.2733 30.7147 18.4513C30.7147 23.8732 26.5871 30.1263 19.0397 30.1263V30.123C16.8101 30.1263 14.6269 29.4876 12.75 28.2835C13.0742 28.3225 13.4 28.342 13.7266 28.3428C15.5743 28.3444 17.3691 27.7245 18.8227 26.5829C17.0669 26.5496 15.5272 25.4048 14.9893 23.7334C15.6044 23.8521 16.2381 23.8277 16.8418 23.6627C14.9275 23.276 13.5503 21.5941 13.5503 19.6408C13.5503 19.6229 13.5503 19.6059 13.5503 19.5888C14.1207 19.9065 14.7593 20.0828 15.4126 20.1023C13.6096 18.8974 13.0539 16.4988 14.1426 14.6235C16.2259 17.187 19.2997 18.7454 22.5993 18.9104C22.2686 17.4852 22.7203 15.9918 23.7864 14.99C25.439 13.4365 28.0382 13.5161 29.5918 15.1679C30.5107 14.9867 31.3915 14.6495 32.1975 14.1718C31.8912 15.1216 31.2501 15.9284 30.3937 16.4411C31.207 16.3453 32.0017 16.1275 32.75 15.7952C32.1991 16.6207 31.5052 17.3398 30.7025 17.9207Z"
-										fill="white"
-									/>
-								</svg>
-								<p className="sm:text-sm text-xs ">
-									Working with DigitX was a pleasure. Their web design team
-									created a stunning website that perfectly captured our brand s
-									essence. The feedback from our customers has been
-									overwhelmingly positive.
-								</p>
-							</div>
-							<div className="ml-5">
-								<svg
-									width="33"
-									height="16"
-									viewBox="0 0 33 16"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M21.3395 13.55C18.9421 16.3969 14.5579 16.3969 12.1605 13.55L0.75 0L32.75 2.74432e-06L21.3395 13.55Z"
-										fill="#262626"
-									/>
-								</svg>
-							</div>
-							<div className="mt-6 flex items-center gap-2">
-								<Image
-									className="rounded-[50%] w-9 h-9 object-cover"
-									width={300}
-									height={300}
-									src="/porfile.png"
-									alt=""
-								/>
-								<div className="flex flex-col justify-center">
-									<h3 className="font-semibold sm:text-base text-sm">
-										Mark Roberts
-									</h3>
-									<span className="text-[#808080] text-xs sm:text-sm">
-										Founder of GreenEarth Eco Store
-									</span>
-								</div>
-							</div>
+							))}
 						</div>
 					</div>
-					<div className="absolute w-72 right-0 bottom-0 h-[350px] bg-gradient-to-l from-[#0f0f0f] to-transparent hidden sm:block"></div>
+					<div className="absolute w-72 right-0 bottom-0 h-[350px] bg-gradient-to-l from-[#0f0f0f] to-transparent hidden lg:block"></div>
 				</div>
 				<div className="flex flex-col items-center mt-24  w-full sm:max-w-[1280px] mx-auto gap-5 relative">
 					<h1 className="text-center text-3xl font-semibold xl:w-[500px]">
@@ -1667,171 +1505,182 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<div className="flex flex-col items-center mt-24 p-4 w-full sm:max-w-[1280px] mx-auto gap-5 relative">
-					<div className="  xl:max-w-[1280px] minh-[700px] mx-auto border border-[#262626] rounded-2xl p-5  my-cardBG flex flex-col items-center">
-						<div className="mt-16 xl:w-[900px] flex flex-col gap-5 lg:px-10">
-							<h1 className="text-2xl font-semibold text-center">
-								Ready to Transform Your Digital Presence?
-							</h1>
-							<p className="text-sm text-center text-[#808080]">
-								Take the first step towards digital success with DigitX by your
-								side. Our team of experts is eager to craft tailored solutions
-								that drive growth for your business. Whether you need a stunning
-								website, a powerful mobile app, or a data-driven marketing
-								campaign, we ve got you covered. Let s embark on this
-								transformative journey together.
+				<div className=" mt-24  mx-5 minh-[700px]  border border-[#262626] rounded-2xl p-5  my-cardBG flex flex-col items-center">
+					<div className="mt-16 xl:w-[900px] flex flex-col gap-5 lg:px-10">
+						<h1 className="text-2xl font-semibold text-center">
+							Ready to Transform Your Digital Presence?
+						</h1>
+						<p className="text-sm text-center text-[#808080]">
+							Take the first step towards digital success with DigitX by your
+							side. Our team of experts is eager to craft tailored solutions
+							that drive growth for your business. Whether you need a stunning
+							website, a powerful mobile app, or a data-driven marketing
+							campaign, we ve got you covered. Let s embark on this
+							transformative journey together.
+						</p>
+					</div>
+					<div className="mt-12 flex flex-col items-center gap-3">
+						<span className="text-sm text-center font-semibold">
+							Unlock your digital potential today
+						</span>
+						<div className="flex gap-3">
+							<button className="text-xs px-2 lg:px-4 py-2 lg:py-3 bg-white rounded-full text-black">
+								Get Started
+							</button>
+							<button className="text-xs px-2 lg:px-4 py-2 lg:py-3  bg-[#1A1A1A] rounded-full  border border-[#262626]">
+								Free Consultation
+							</button>
+						</div>
+					</div>
+					<div className="w-full mt-12 rounded-xl flex flex-col gap-6  bg-[#0f0f0f] p-">
+						<div className="w-full h-[80px] flex flex-col items-center justify-center p-2 gap-4">
+							<h4 className="font-semibold text-center">Online Inquiry Form</h4>
+							<p className="lg:text-sm text-center text-xs text-[#808080]">
+								Please fill in the following details, and we ll get back to you
+								within 24 hours.
 							</p>
 						</div>
-						<div className="mt-12 flex flex-col items-center gap-3">
-							<span className="text-sm text-center font-semibold">
-								Unlock your digital potential today
-							</span>
-							<div className="flex gap-3">
-								<button className="text-xs px-2 lg:px-4 py-2 lg:py-3 bg-white rounded-full text-black">
-									Get Started
-								</button>
-								<button className="text-xs px-2 lg:px-4 py-2 lg:py-3  bg-[#1A1A1A] rounded-full  border border-[#262626]">
-									Free Consultation
+						<form
+							className="flex flex-col gap-4"
+							name="contact"
+							method="POST"
+							data-netlify="true"
+						>
+							<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
+								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
+									<label
+										htmlFor="Name"
+										className="font-light ml-2 text-xs sm:text-sm"
+									>
+										Name
+									</label>
+									<input
+										type="text"
+										name="name"
+										required
+										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+										placeholder="Name"
+									/>
+								</div>
+								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
+									<label
+										htmlFor="Email"
+										className="text-xs sm:text-sm font-light ml-2"
+									>
+										Email
+									</label>
+									<input
+										type="email"
+										name="email"
+										required
+										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+										placeholder="Enter your Email"
+									/>
+								</div>
+								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
+									<label
+										htmlFor="Phone Number"
+										className="text-xs sm:text-sm font-light ml-2"
+									>
+										Phone Number
+									</label>
+									<input
+										type="text"
+										name="mobile"
+										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+										placeholder="Enter your Phone Number"
+									/>
+								</div>
+							</div>
+							<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
+								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
+									<label
+										htmlFor="Select Service"
+										className="text-xs sm:text-sm font-light ml-2"
+									>
+										Select Service
+									</label>
+									<select
+										id="underline_select"
+										name="services"
+										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full text-sm placeholder:text-sm placeholder:text-[#666666] focus:outline-none appearance-none text-[#666666]"
+									>
+										<option selected>Choose your services</option>
+										<option value="US">United States</option>
+										<option value="CA">Canada</option>
+										<option value="FR">France</option>
+										<option value="DE">Germany</option>
+									</select>
+								</div>
+								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
+									<label
+										htmlFor="Company / Organization Name"
+										className="text-xs sm:text-sm font-light ml-2"
+									>
+										Company / Organization Name
+									</label>
+									<input
+										name="company"
+										type="text"
+										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+										placeholder="Enter Organization Name"
+									/>
+								</div>
+								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
+									<label
+										htmlFor="Subject"
+										className="text-xs sm:text-sm font-light ml-2"
+									>
+										Subject
+									</label>
+
+									<input
+										type="text"
+										name="subject"
+										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+										placeholder="Subject"
+									/>
+								</div>
+							</div>
+							<div className="w-full min-h-[120px] flex items-center justify-between">
+								<div className="h-full w-full flex flex-col justify-center px-5 gap-2">
+									<label
+										htmlFor="Message"
+										className="text-xs sm:text-sm font-light ml-2"
+									>
+										Message
+									</label>
+									<textarea
+										name="message"
+										id="message"
+										placeholder="Enter your Message"
+										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-xl h-[100px] p-4 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+									></textarea>
+								</div>
+							</div>
+							<div className="w-full min-h-[70px] flex items-center justify-center">
+								<button
+									type="submit"
+									className="border border-[#1F1F1F] px-5 py-3 rounded-full flex justify-center items-center gap-2 bg-[#1a1a1a]"
+								>
+									<span className="text-xs sm:text-sm">Send your Inquiry</span>
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M5.33398 11.9999C5.33398 11.42 5.79065 10.9499 6.35398 10.9499H15.3816L12.447 8.20678C12.0409 7.80484 12.0283 7.14015 12.4187 6.72214C12.8092 6.30413 13.4549 6.2911 13.861 6.69303L18.621 11.243C18.821 11.441 18.934 11.7143 18.934 11.9999C18.934 12.2855 18.821 12.5588 18.621 12.7568L13.861 17.3068C13.4549 17.7087 12.8092 17.6957 12.4187 17.2777C12.0283 16.8597 12.0409 16.195 12.447 15.793L15.3816 13.0499H6.35398C5.79065 13.0499 5.33398 12.5798 5.33398 11.9999Z"
+											fill="white"
+										/>
+									</svg>
 								</button>
 							</div>
-						</div>
-						<div className="w-full mt-12 rounded-xl flex flex-col gap-6  bg-[#0f0f0f] p-">
-							<div className="w-full h-[80px] flex flex-col items-center justify-center p-2 gap-4">
-								<h4 className="font-semibold text-center">
-									Online Inquiry Form
-								</h4>
-								<p className="lg:text-sm text-center text-xs text-[#808080]">
-									Please fill in the following details, and we ll get back to
-									you within 24 hours.
-								</p>
-							</div>
-							<form className="flex flex-col gap-4" action="">
-								<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
-									<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
-										<label
-											htmlFor="Name"
-											className="font-light ml-2 text-xs sm:text-sm"
-										>
-											Name
-										</label>
-										<input
-											type="text"
-											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
-											placeholder="Name"
-										/>
-									</div>
-									<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
-										<label
-											htmlFor="Email"
-											className="text-xs sm:text-sm font-light ml-2"
-										>
-											Email
-										</label>
-										<input
-											type="email"
-											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
-											placeholder="Enter your Email"
-										/>
-									</div>
-									<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
-										<label
-											htmlFor="Phone Number"
-											className="text-xs sm:text-sm font-light ml-2"
-										>
-											Phone Number
-										</label>
-										<input
-											type="text"
-											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
-											placeholder="Enter your Phone Number"
-										/>
-									</div>
-								</div>
-								<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
-									<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
-										<label
-											htmlFor="Select Service"
-											className="text-xs sm:text-sm font-light ml-2"
-										>
-											Select Service
-										</label>
-										<input
-											type="text"
-											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
-											placeholder="Select your Service"
-										/>
-									</div>
-									<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
-										<label
-											htmlFor="Company / Organization Name"
-											className="text-xs sm:text-sm font-light ml-2"
-										>
-											Company / Organization Name
-										</label>
-										<input
-											type="text"
-											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
-											placeholder="Enter Organization Name"
-										/>
-									</div>
-									<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
-										<label
-											htmlFor="Subject"
-											className="text-xs sm:text-sm font-light ml-2"
-										>
-											Subject
-										</label>
-										<select
-											id="underline_select"
-											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none appearance-none text-[#666666]"
-										>
-											<option selected>Choose your Subject</option>
-											<option value="US">United States</option>
-											<option value="CA">Canada</option>
-											<option value="FR">France</option>
-											<option value="DE">Germany</option>
-										</select>
-									</div>
-								</div>
-								<div className="w-full min-h-[120px] flex items-center justify-between">
-									<div className="h-full w-full flex flex-col justify-center px-5 gap-2">
-										<label
-											htmlFor="Message"
-											className="text-xs sm:text-sm font-light ml-2"
-										>
-											Message
-										</label>
-										<textarea
-											name="Message"
-											id=""
-											placeholder="Enter your Message"
-											className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-xl h-[100px] p-4 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
-										></textarea>
-									</div>
-								</div>
-								<div className="w-full min-h-[70px] flex items-center justify-center">
-									<button className="border border-[#1F1F1F] px-5 py-3 rounded-full flex justify-center items-center gap-2 bg-[#1a1a1a]">
-										<span className="text-xs sm:text-sm">
-											Send your Inquiry
-										</span>
-										<svg
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												fill-rule="evenodd"
-												clip-rule="evenodd"
-												d="M5.33398 11.9999C5.33398 11.42 5.79065 10.9499 6.35398 10.9499H15.3816L12.447 8.20678C12.0409 7.80484 12.0283 7.14015 12.4187 6.72214C12.8092 6.30413 13.4549 6.2911 13.861 6.69303L18.621 11.243C18.821 11.441 18.934 11.7143 18.934 11.9999C18.934 12.2855 18.821 12.5588 18.621 12.7568L13.861 17.3068C13.4549 17.7087 12.8092 17.6957 12.4187 17.2777C12.0283 16.8597 12.0409 16.195 12.447 15.793L15.3816 13.0499H6.35398C5.79065 13.0499 5.33398 12.5798 5.33398 11.9999Z"
-												fill="white"
-											/>
-										</svg>
-									</button>
-								</div>
-							</form>
-						</div>
+						</form>
 					</div>
 				</div>
 			</main>
