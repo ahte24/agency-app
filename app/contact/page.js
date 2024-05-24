@@ -5,6 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import serviceLeftAngle from "@/public/serviceLeftAngle.svg";
 import serviceRightAngle from "@/public/serviceRightAngle.svg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Bounce } from "react-toastify";
 
 const Contact = () => {
 	const [formData, setFormData] = useState({
@@ -35,14 +38,48 @@ const Contact = () => {
 		});
 
 		if (response.ok) {
-			alert("Your inquiry has been sent successfully!");
+			toast.success("Inquiry Sent Successfully.", {
+				position: "top-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "light",
+				transition: Bounce,
+			});
 		} else {
 			const errorData = await response.json();
-			alert(`There was an error sending your inquiry: ${errorData.message}`);
+			toast.error("Something went wrong.", {
+				position: "top-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "light",
+				transition: Bounce,
+			});
 		}
 	};
 	return (
 		<>
+			<ToastContainer
+				position="top-right"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme="light"
+				Bounce="true"
+			/>
+			<ToastContainer />
 			<main>
 				<div className="Herro-Section">
 					<div className="lg:h-[500px] min-h-[400px] my-cardBG flex relative">

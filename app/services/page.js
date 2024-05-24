@@ -12,6 +12,10 @@ import cardIconFourth from "@/public/cardIconFourth.svg";
 import servicesprotfolio1 from "@/public/servicesprotfolio1.jpg";
 import servicesprotfolio2 from "@/public/servicesportfolio2.jpg";
 import sun from "@/public/sun.svg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Bounce } from "react-toastify";
+
 const Services = () => {
 	const [isHidden, setIsHidden] = useState(true);
 	const [currentVisibleIndex, setCurrentVisibleIndex] = useState(0); // Initially no div visible
@@ -26,8 +30,77 @@ const Services = () => {
 		}
 	};
 
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		mobile: "",
+		services: "",
+		company: "",
+		subject: "",
+		message: "",
+	});
+
+	const handleChange = (e) => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value,
+		});
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		const response = await fetch("/api/send-email", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(formData),
+		});
+
+		if (response.ok) {
+			toast.success("Inquiry Sent Successfully.", {
+				position: "top-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "light",
+				transition: Bounce,
+			});
+		} else {
+			const errorData = await response.json();
+			toast.error("Something went wrong.", {
+				position: "top-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "light",
+				transition: Bounce,
+			});
+		}
+	};
+
 	return (
 		<>
+		<ToastContainer
+				position="top-right"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme="light"
+				Bounce="true"
+			/>
+			<ToastContainer />
 			<main>
 				<div className="Herro-Section">
 					<div className="lg:h-[500px] min-h-[400px] my-cardBG flex relative">
@@ -1934,7 +2007,8 @@ const Services = () => {
 								within 24 hours.
 							</p>
 						</div>
-						<form className="flex flex-col gap-4" action="">
+						<form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+							<input type="hidden" name="form-name" value="contact" />
 							<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
 									<label
@@ -1945,8 +2019,12 @@ const Services = () => {
 									</label>
 									<input
 										type="text"
+										name="name"
+										id="name"
+										required
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
 										placeholder="Name"
+										onChange={handleChange}
 									/>
 								</div>
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
@@ -1958,8 +2036,12 @@ const Services = () => {
 									</label>
 									<input
 										type="email"
+										name="email"
+										id="email"
+										required
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
 										placeholder="Enter your Email"
+										onChange={handleChange}
 									/>
 								</div>
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
@@ -1971,8 +2053,10 @@ const Services = () => {
 									</label>
 									<input
 										type="text"
+										name="mobile"
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
 										placeholder="Enter your Phone Number"
+										onChange={handleChange}
 									/>
 								</div>
 							</div>
@@ -1984,11 +2068,18 @@ const Services = () => {
 									>
 										Select Service
 									</label>
-									<input
-										type="text"
-										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
-										placeholder="Select your Service"
-									/>
+									<select
+										id="underline_select"
+										name="services"
+										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full text-sm placeholder:text-sm placeholder:text-[#666666] focus:outline-none appearance-none text-[#666666]"
+										onChange={handleChange}
+									>
+										<option value="">Choose your services</option>
+										<option value="US">United States</option>
+										<option value="CA">Canada</option>
+										<option value="FR">France</option>
+										<option value="DE">Germany</option>
+									</select>
 								</div>
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
 									<label
@@ -1998,9 +2089,11 @@ const Services = () => {
 										Company / Organization Name
 									</label>
 									<input
+										name="company"
 										type="text"
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
 										placeholder="Enter Organization Name"
+										onChange={handleChange}
 									/>
 								</div>
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
@@ -2010,16 +2103,13 @@ const Services = () => {
 									>
 										Subject
 									</label>
-									<select
-										id="underline_select"
-										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none appearance-none text-[#666666]"
-									>
-										<option selected>Choose your Subject</option>
-										<option value="US">United States</option>
-										<option value="CA">Canada</option>
-										<option value="FR">France</option>
-										<option value="DE">Germany</option>
-									</select>
+									<input
+										type="text"
+										name="subject"
+										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+										placeholder="Subject"
+										onChange={handleChange}
+									/>
 								</div>
 							</div>
 							<div className="w-full min-h-[120px] flex items-center justify-between">
@@ -2031,15 +2121,19 @@ const Services = () => {
 										Message
 									</label>
 									<textarea
-										name="Message"
-										id=""
+										name="message"
+										id="message"
 										placeholder="Enter your Message"
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-xl h-[100px] p-4 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+										onChange={handleChange}
 									></textarea>
 								</div>
 							</div>
 							<div className="w-full min-h-[70px] flex items-center justify-center">
-								<button className="border border-[#1F1F1F] px-5 py-3 rounded-full flex justify-center items-center gap-2 bg-[#1a1a1a]">
+								<button
+									type="submit"
+									className="border border-[#1F1F1F] px-5 py-3 rounded-full flex justify-center items-center gap-2 bg-[#1a1a1a]"
+								>
 									<span className="text-xs sm:text-sm">Send your Inquiry</span>
 									<svg
 										width="24"
@@ -2049,8 +2143,8 @@ const Services = () => {
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
+											fillRule="evenodd"
+											clipRule="evenodd"
 											d="M5.33398 11.9999C5.33398 11.42 5.79065 10.9499 6.35398 10.9499H15.3816L12.447 8.20678C12.0409 7.80484 12.0283 7.14015 12.4187 6.72214C12.8092 6.30413 13.4549 6.2911 13.861 6.69303L18.621 11.243C18.821 11.441 18.934 11.7143 18.934 11.9999C18.934 12.2855 18.821 12.5588 18.621 12.7568L13.861 17.3068C13.4549 17.7087 12.8092 17.6957 12.4187 17.2777C12.0283 16.8597 12.0409 16.195 12.447 15.793L15.3816 13.0499H6.35398C5.79065 13.0499 5.33398 12.5798 5.33398 11.9999Z"
 											fill="white"
 										/>

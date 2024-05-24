@@ -21,6 +21,9 @@ import workCardIconFour from "../public/workCardIconFour.svg";
 import cardLogo from "../public/cardLogo.svg";
 import thirdPartner from "../public/thirdPartner.svg";
 import profile from "../public/porfile.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Bounce } from "react-toastify";
 
 export default function Home() {
 	const [isHidden1, setIsHidden1] = useState(true);
@@ -95,8 +98,77 @@ export default function Home() {
 		},
 	];
 
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		mobile: "",
+		services: "",
+		company: "",
+		subject: "",
+		message: "",
+	});
+
+	const handleChange = (e) => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value,
+		});
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		const response = await fetch("../api/send-email", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(formData),
+		});
+
+		if (response.ok) {
+			toast.success("Inquiry Sent Successfully.", {
+				position: "top-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "light",
+				transition: Bounce,
+			});
+		} else {
+			const errorData = await response.json();
+			toast.error("Something went wrong.", {
+				position: "top-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "light",
+				transition: Bounce,
+			});
+		}
+	};
+
 	return (
 		<>
+			<ToastContainer
+				position="top-right"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme="light"
+				Bounce="true"
+			/>
+			<ToastContainer />
 			<main className=" mx-auto ">
 				<div className="Hero-section flex md:h-[550px] min-h-[400px]">
 					<div className="flex flex-col gap-10 lg:w-1/2  pt-24 my-element">
@@ -1540,9 +1612,8 @@ export default function Home() {
 								within 24 hours.
 							</p>
 						</div>
-						<form className="flex flex-col gap-4" action="">
+						<form className="flex flex-col gap-4" onSubmit={handleSubmit}>
 							<input type="hidden" name="form-name" value="contact" />
-
 							<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
 									<label
@@ -1558,6 +1629,7 @@ export default function Home() {
 										required
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
 										placeholder="Name"
+										onChange={handleChange}
 									/>
 								</div>
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
@@ -1574,6 +1646,7 @@ export default function Home() {
 										required
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
 										placeholder="Enter your Email"
+										onChange={handleChange}
 									/>
 								</div>
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
@@ -1588,6 +1661,7 @@ export default function Home() {
 										name="mobile"
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
 										placeholder="Enter your Phone Number"
+										onChange={handleChange}
 									/>
 								</div>
 							</div>
@@ -1603,8 +1677,9 @@ export default function Home() {
 										id="underline_select"
 										name="services"
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full text-sm placeholder:text-sm placeholder:text-[#666666] focus:outline-none appearance-none text-[#666666]"
+										onChange={handleChange}
 									>
-										<option selected>Choose your services</option>
+										<option value="">Choose your services</option>
 										<option value="US">United States</option>
 										<option value="CA">Canada</option>
 										<option value="FR">France</option>
@@ -1623,9 +1698,9 @@ export default function Home() {
 										type="text"
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
 										placeholder="Enter Organization Name"
+										onChange={handleChange}
 									/>
 								</div>
-
 								<div className="h-full w-full lg:w-1/3 flex flex-col justify-center px-5 gap-2">
 									<label
 										htmlFor="Subject"
@@ -1638,6 +1713,7 @@ export default function Home() {
 										name="subject"
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
 										placeholder="Subject"
+										onChange={handleChange}
 									/>
 								</div>
 							</div>
@@ -1654,6 +1730,7 @@ export default function Home() {
 										id="message"
 										placeholder="Enter your Message"
 										className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-xl h-[100px] p-4 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+										onChange={handleChange}
 									></textarea>
 								</div>
 							</div>

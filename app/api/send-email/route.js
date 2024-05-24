@@ -10,14 +10,14 @@ export async function POST(req) {
 		const transporter = nodemailer.createTransport({
 			service: "gmail",
 			auth: {
-				user: process.env.EMAIL_USER,
+				user: process.env.EMAIL_FIRM,
 				pass: process.env.EMAIL_PASS,
 			},
 		});
 
 		const mailOptions = {
-			from: process.env.EMAIL_USER,
-			to: process.env.EMAIL_FIRM,
+			from: process.env.EMAIL_FIRM,
+			to: process.env.EMAIL_USER,
 			subject: "New Inquiry from Contact Form",
 			html: `
         <div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; background-color: #1a1a1a; color: #f0f0f0; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
