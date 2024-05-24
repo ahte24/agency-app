@@ -174,7 +174,7 @@ export default function Home() {
 			<main className=" mx-auto ">
 				<ScrollAnimation variants={scaleUpVariants}>
 					<div className="Hero-section flex md:h-[550px] min-h-[400px]">
-						<div className="flex flex-col gap-10 lg:w-1/2  pt-24 my-element">
+						<div className="flex flex-col gap-10 lg:w-1/2   my-element">
 							<div className="flex flex-col m-auto gap-3 max-w-[85%]">
 								<h1 className="xl:text-4xl text-2xl font-semibold ">
 									Digital Solution{" "}
@@ -204,7 +204,7 @@ export default function Home() {
 								</div>
 							</div>
 						</div>
-						<div className="w-1/2 pt-24 text-5xl justify-center items-center lg:flex bg-[#090909a2] hidden">
+						<div className="w-1/2 text-5xl justify-center items-center lg:flex bg-[#090909a2] hidden">
 							LOGO
 						</div>
 					</div>
@@ -1747,129 +1747,117 @@ export default function Home() {
 									<input type="hidden" name="form-name" value="contact" />
 									<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
 										<div className="lg:w-1/3  w-full">
-											<ScrollAnimation variants={scaleUpVariants}>
-												<div className="h-full flex flex-col justify-center px-5 gap-2">
-													<label
-														htmlFor="Name"
-														className="font-light ml-2 text-xs sm:text-sm"
-													>
-														Name
-													</label>
-													<input
-														type="text"
-														name="name"
-														id="name"
-														required
-														className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
-														placeholder="Name"
-														onChange={handleChange}
-													/>
-												</div>
-											</ScrollAnimation>
+											<div className="h-full flex flex-col justify-center px-5 gap-2">
+												<label
+													htmlFor="Name"
+													className="font-light ml-2 text-xs sm:text-sm"
+												>
+													Name
+												</label>
+												<input
+													type="text"
+													name="name"
+													id="name"
+													required
+													className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+													placeholder="Name"
+													onChange={handleChange}
+												/>
+											</div>
 										</div>
 										<div className="lg:w-1/3  w-full">
-											<ScrollAnimation variants={scaleUpVariants}>
-												<div className="h-full flex flex-col justify-center px-5 gap-2">
-													<label
-														htmlFor="Email"
-														className="text-xs sm:text-sm font-light ml-2"
-													>
-														Email
-													</label>
-													<input
-														type="email"
-														name="email"
-														id="email"
-														required
-														className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
-														placeholder="Enter your Email"
-														onChange={handleChange}
-													/>
-												</div>
-											</ScrollAnimation>
+											<div className="h-full flex flex-col justify-center px-5 gap-2">
+												<label
+													htmlFor="Email"
+													className="text-xs sm:text-sm font-light ml-2"
+												>
+													Email
+												</label>
+												<input
+													type="email"
+													name="email"
+													id="email"
+													required
+													className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+													placeholder="Enter your Email"
+													onChange={handleChange}
+												/>
+											</div>
 										</div>
 										<div className="lg:w-1/3  w-full">
-											<ScrollAnimation variants={scaleUpVariants}>
-												<div className="h-full flex flex-col justify-center px-5 gap-2">
-													<label
-														htmlFor="Phone Number"
-														className="text-xs sm:text-sm font-light ml-2"
-													>
-														Phone Number
-													</label>
-													<input
-														type="text"
-														name="mobile"
-														className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
-														placeholder="Enter your Phone Number"
-														onChange={handleChange}
-													/>
-												</div>
-											</ScrollAnimation>
+											<div className="h-full flex flex-col justify-center px-5 gap-2">
+												<label
+													htmlFor="Phone Number"
+													className="text-xs sm:text-sm font-light ml-2"
+												>
+													Phone Number
+												</label>
+												<input
+													type="text"
+													name="mobile"
+													className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+													placeholder="Enter your Phone Number"
+													onChange={handleChange}
+												/>
+											</div>
 										</div>
 									</div>
 									<div className="w-full h-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
 										<div className="lg:w-1/3  w-full">
-											<ScrollAnimation variants={scaleUpVariants}>
-												<div className="h-full flex flex-col justify-center px-5 gap-2">
-													<label
-														htmlFor="Select Service"
-														className="text-xs sm:text-sm font-light ml-2"
-													>
-														Select Service
-													</label>
-													<select
-														id="underline_select"
-														name="services"
-														className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full text-sm placeholder:text-sm placeholder:text-[#666666] focus:outline-none appearance-none text-[#666666]"
-														onChange={handleChange}
-													>
-														<option value="">Choose your services</option>
-														<option value="US">United States</option>
-														<option value="CA">Canada</option>
-														<option value="FR">France</option>
-														<option value="DE">Germany</option>
-													</select>
-												</div>
-											</ScrollAnimation>
+											<div className="h-full flex flex-col justify-center px-5 gap-2">
+												<label
+													htmlFor="Select Service"
+													className="text-xs sm:text-sm font-light ml-2"
+												>
+													Select Service
+												</label>
+												<select
+													id="underline_select"
+													name="services"
+													className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full text-sm placeholder:text-sm placeholder:text-[#666666] focus:outline-none appearance-none text-[#666666]"
+													onChange={handleChange}
+												>
+													<option value="">Choose your services</option>
+													<option value="US">United States</option>
+													<option value="CA">Canada</option>
+													<option value="FR">France</option>
+													<option value="DE">Germany</option>
+												</select>
+											</div>
 										</div>
 										<div className="lg:w-1/3  w-full">
-											<ScrollAnimation variants={scaleUpVariants}>
-												<div className="h-full flex flex-col justify-center px-5 gap-2">
-													<label
-														htmlFor="Company / Organization Name"
-														className="text-xs sm:text-sm font-light ml-2"
-													>
-														Company / Organization Name
-													</label>
-													<input
-														name="company"
-														type="text"
-														className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
-														placeholder="Enter Organization Name"
-														onChange={handleChange}
-													/>
-												</div>
-											</ScrollAnimation>
+											<div className="h-full flex flex-col justify-center px-5 gap-2">
+												<label
+													htmlFor="Company / Organization Name"
+													className="text-xs sm:text-sm font-light ml-2"
+												>
+													Company / Organization Name
+												</label>
+												<input
+													name="company"
+													type="text"
+													className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+													placeholder="Enter Organization Name"
+													onChange={handleChange}
+												/>
+											</div>
 										</div>
 										<div className="lg:w-1/3  w-full">
-											<ScrollAnimation variants={scaleUpVariants}>
-												<div className="h-full flex flex-col justify-center px-5 gap-2">
-													<label
-														htmlFor="Subject"
-														className="text-xs sm:text-sm font-light ml-2"
-													>
-														Subject
-													</label>
-													<input
-														type="text"
-														name="subject"
-														className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
-														placeholder="Subject"
-														onChange={handleChange}
-													/>
-												</div>
-											</ScrollAnimation>
+											<div className="h-full flex flex-col justify-center px-5 gap-2">
+												<label
+													htmlFor="Subject"
+													className="text-xs sm:text-sm font-light ml-2"
+												>
+													Subject
+												</label>
+												<input
+													type="text"
+													name="subject"
+													className="bg-[#0f0f0f] border border-[#1F1F1F] rounded-full py-3 px-3 w-full placeholder:text-sm placeholder:text-[#666666] focus:outline-none"
+													placeholder="Subject"
+													onChange={handleChange}
+												/>
+											</div>
 										</div>
 									</div>
 									<div className="w-full min-h-[120px] flex items-center justify-between">
