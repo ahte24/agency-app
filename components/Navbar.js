@@ -72,7 +72,7 @@ const Navbar = () => {
 				</nav>
 				<div
 					onClick={toggleVisibility}
-					className={`w-full left-0 bg-[#0f0f0f]  transition-all border-b z-10 border-[#1F1F1F] backdrop-filter backdrop-blur-md bg-opacity-20 absolute ${
+					className={`w-full left-0 bg-black  transition-all border-b z-10 border-[#1F1F1F] backdrop-filter backdrop-blur-md bg-opacity-20 absolute ${
 						isHidden
 							? " transition-all  duration-1000 transform-y-full"
 							: "transition-all top-[64px] duration-500 transform-y-0"
