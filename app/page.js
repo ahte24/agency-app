@@ -181,7 +181,7 @@ export default function Home() {
 									<span className="text-[#666666]">That Drive Success</span>
 								</h1>
 
-								<p className="md:text-sm text-xs text-[#808080]  min-h-[120px]">
+								<p className="text-sm  text-[#808080]  min-h-[120px]">
 									At DigitX, we believe in the transformative power of digital
 									solutions. Our team of experts is dedicated to helping
 									businesses like yours thrive in the fast-paced digital
@@ -209,7 +209,6 @@ export default function Home() {
 						</div>
 					</div>
 				</ScrollAnimation>
-				<ScrollAnimation variants={variants}>
 					<div className="flex flex-col items-center mt-24  w-full sm:max-w-[1280px] mx-auto gap-5 p-4 sm:px-10">
 						<h1 className="text-center text-3xl font-semibold xl:w-[500px]">
 							Reasons to Choose DigitX for{" "}
@@ -470,8 +469,6 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-				</ScrollAnimation>
-				<ScrollAnimation variants={variants}>
 					<div className="flex flex-col items-center mt-24 w-full sm:max-w-[1280px] p-4 sm:px-10 mx-auto gap-10">
 						<h1 className="text-center sm:text-3xl text-xl font-semibold xl:w-[500px]">
 							<span className="text-[#808080]">Our</span> Services
@@ -674,8 +671,6 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-				</ScrollAnimation>
-				<ScrollAnimation variants={variants}>
 					<div className="flex flex-col items-center mt-24  w-full sm:max-w-[1280px] mx-auto gap-10 p-4 sm:px-10">
 						<h1 className="text-center text-3xl font-semibold xl:w-[500px]">
 							<span className="text-[#808080]">Our</span> Works
@@ -919,8 +914,6 @@ export default function Home() {
 							</Link>
 						</ScrollAnimation>
 					</div>
-				</ScrollAnimation>
-				<ScrollAnimation variants={scaleUpVariants}>
 					<div className="flex flex-col items-center mt-24  w-full sm:max-w-[1280px] mx-auto gap-10 relative">
 						<div className="absolute w-72 left-0 bottom-0 h-[350px] bg-gradient-to-r from-[#0f0f0f] to-transparent hidden lg:block z-20"></div>
 
@@ -1006,8 +999,6 @@ export default function Home() {
 						</div>
 						<div className="absolute w-72 right-0 bottom-0 h-[350px] bg-gradient-to-l from-[#0f0f0f] to-transparent hidden lg:block"></div>
 					</div>
-				</ScrollAnimation>
-				<ScrollAnimation variants={scaleUpVariants}>
 					<div className="flex flex-col items-center mt-24  w-full sm:max-w-[1280px] mx-auto gap-5 relative">
 						<h1 className="text-center text-3xl font-semibold xl:w-[500px]">
 							<span className="text-[#808080]">Frequently</span> Asked Questions
@@ -1505,8 +1496,6 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-				</ScrollAnimation>
-				<ScrollAnimation variants={scaleUpVariants}>
 					<div className="flex flex-col items-center mt-24  w-full sm:max-w-[1280px] mx-auto gap-5 relative">
 						<h1 className="text-center text-3xl font-semibold xl:w-[500px]">
 							<span className="text-[#808080]">Our</span> Partners and Clients
@@ -1701,7 +1690,6 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-				</ScrollAnimation>
 				<ScrollAnimation variants={scaleUpVariants}>
 					<div className=" mt-24  mx-5 minh-[700px]  border border-[#262626] rounded-2xl p-5  my-cardBG flex flex-col items-center">
 						<div className="mt-16 xl:w-[900px] flex flex-col gap-5 lg:px-10">
