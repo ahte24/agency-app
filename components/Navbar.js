@@ -15,7 +15,7 @@ const Navbar = () => {
 	return (
 		<>
 			<div className="sticky top-0 z-50">
-				<nav className=" z-50 w-full px-[40px] lg:px-[80px]  py-[20px] flex flex-col bg-black relative  border-b border-[#1F1F1F] backdrop-filter backdrop-blur-sm bg-opacity-20 text-white  ">
+				<nav className=" z-50 w-full px-[40px] lg:px-[80px]  py-[20px] flex flex-col bg-black relative backdrop-filter backdrop-blur-md bg-opacity-20 text-white  ">
 					<div className="flex items-center justify-between w-full">
 						<div>LoGo</div>
 						<div className="">
@@ -72,14 +72,14 @@ const Navbar = () => {
 				</nav>
 				<div
 					onClick={toggleVisibility}
-					className={`w-full left-0 bg-[#0f0f0f]  transition-all border-b z-10 border-[#1F1F1F] backdrop-filter backdrop-blur-sm bg-opacity-20 absolute ${
+					className={`w-full left-0 bg-[#0f0f0f]  transition-all border-b z-10 border-[#1F1F1F] backdrop-filter backdrop-blur-md bg-opacity-20 absolute ${
 						isHidden
 							? " transition-all  duration-1000 transform-y-full"
-							: "transition-all top-[67px] duration-500 transform-y-0"
+							: "transition-all top-[64px] duration-500 transform-y-0"
 					} top-[-240px]`}
 				>
 					<div>
-						<ul className=" gap-[10px]  flex flex-col items-center justify-center ">
+						<ul className=" gap-[10px] p-4 flex flex-col items-center justify-center ">
 							<Link
 								href={"/"}
 								className="text-sm text-center py-2 px-3 transition-all hover:bg-[#1A1A1A] rounded-full"
