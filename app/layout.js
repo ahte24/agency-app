@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 const sora = Sora({ subsets: ["latin"] });
+import Link from "next/link";
 
 export const metadata = {
 	title: "Create Next App",
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
 					<Navbar />
 					{children}
 					<Footer />
-					<div className="fixed bottom-[2%] right-[2%]">
+					<Link href={"/hellow world"} className="fixed bottom-[2%] right-[2%]">
 						<svg
 							width="100"
 							height="100"
@@ -70,7 +71,7 @@ export default function RootLayout({ children }) {
 								</pattern>
 							</defs>
 						</svg>
-					</div>
+					</Link>
 				</div>
 			</body>
 		</html>
