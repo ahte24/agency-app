@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
 					<Navbar />
 					{children}
 					<Footer />
-					<Link href={"/hellow world"} className="fixed bottom-[2%] right-[2%]">
+					<Link href={"https://wa.me/9114111987"} target="_blank"  className="fixed bottom-[1%] right-[1%]">
 						<svg
 							width="100"
 							height="100"

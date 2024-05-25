@@ -238,7 +238,7 @@ export default function Home() {
 											</div>
 											<Link
 												className="flex items-center gap-2 py-2 px-4 text-sm border border-[#1F1F1F] rounded-full"
-												href="/#"
+												href="/about"
 											>
 												Learn More
 												<div className="p-1 rounded-full bg-[#1A1A1A]">
@@ -278,7 +278,7 @@ export default function Home() {
 											</div>
 											<Link
 												className="flex items-center gap-2 py-2 px-4 text-sm border border-[#1F1F1F] rounded-full"
-												href="/#"
+												href="/about"
 											>
 												Learn More
 												<div className="p-1 rounded-full bg-[#1A1A1A]">
@@ -320,7 +320,7 @@ export default function Home() {
 
 											<Link
 												className="flex items-center gap-2 py-2 px-4 text-sm border border-[#1F1F1F] rounded-full"
-												href="/#"
+												href="/about"
 											>
 												Learn More
 												<div className="p-1 rounded-full bg-[#1A1A1A]">
@@ -361,7 +361,7 @@ export default function Home() {
 												</p>
 											</div>
 											<Link
-												href="/#"
+												href="/about"
 												className="flex items-center gap-2 py-2 px-4 text-sm border border-[#1F1F1F] rounded-full"
 											>
 												Learn More
@@ -402,7 +402,7 @@ export default function Home() {
 											</div>
 
 											<Link
-												href="/#"
+												href="/about"
 												className="flex items-center gap-2 py-2 px-4 text-sm border border-[#1F1F1F] rounded-full"
 											>
 												Learn More
@@ -443,7 +443,7 @@ export default function Home() {
 											</div>
 
 											<Link
-												href="/#"
+												href="/about"
 												className="flex items-center gap-2 py-2 px-4 text-sm border border-[#1F1F1F] rounded-full"
 											>
 												Learn More
@@ -505,7 +505,7 @@ export default function Home() {
 										</div>
 										<Link
 											className="flex items-center gap-2 py-2 px-4 text-sm border bg-[#1a1a1a] border-[#262626] rounded-full"
-											href="/#"
+											href="/services"
 										>
 											Learn More
 											<div className="p-1 rounded-full">
@@ -550,7 +550,7 @@ export default function Home() {
 										</div>
 										<Link
 											className="flex items-center gap-2 py-2 px-4 text-sm border bg-[#1a1a1a] border-[#262626] rounded-full"
-											href="/#"
+											href="/services"
 										>
 											Learn More
 											<div className="p-1 rounded-full">
@@ -595,7 +595,7 @@ export default function Home() {
 										</div>
 										<Link
 											className="flex items-center gap-2 py-2 px-4 text-sm border bg-[#1a1a1a] border-[#262626] rounded-full"
-											href="/#"
+											href="/services"
 										>
 											Learn More
 											<div className="p-1 rounded-full">
@@ -637,7 +637,7 @@ export default function Home() {
 										</div>
 										<Link
 											className="flex items-center gap-2 py-2 px-4 text-sm border bg-[#1a1a1a] border-[#262626] rounded-full"
-											href="/#"
+											href="/services"
 										>
 											Learn More
 											<div className="p-1 rounded-full">
